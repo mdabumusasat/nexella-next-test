@@ -1,0 +1,943 @@
+// /*** 
+
+// ====================================================================
+//     Project Section
+// ====================================================================
+
+// ***/
+
+// .project-one {
+//   position: relative;
+//   padding: 200px 0px 120px;
+//   background-color: var(--theme-color1);
+
+//   @include media-breakpoint-down(xl){
+//     .project-one {
+//       .sec-title{
+//         h2{
+//           br{
+//             display:none;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   &::before{
+//     position: absolute;
+//     content: '';
+//     left: 0px;
+//     top: 0px;
+//     right: 0px;
+//     height: 78px;
+//     background: url(../images/background/lines.png) repeat-x;
+//   }
+
+//   &::after{
+//     position: absolute;
+//     content: '';
+//     left: -50px;
+//     bottom: -400px;
+//     width: 673px;
+//     height: 769px;
+//     background: url(../images/background/project-circel.png) no-repeat;
+//   }
+
+//   .auto-container{
+//     position: relative;
+//   }
+
+//   .filter-list{
+//     position: relative;
+//     padding-left: 440px;
+//     margin-top: -265px;
+//     @include media-breakpoint-down(xl){
+//       padding-left: 0px;
+//       margin-top: 0px;
+//     }
+//   }
+
+//   .filters {
+//     position: absolute;
+//     left: 20px;
+//     top: 300px;
+//     z-index: 1;
+//     display: inline-block;
+//     @include media-breakpoint-down(xl){
+//       position: relative;
+//       left:0px;
+//       top:0px;
+//       display:block;
+//     }
+//     .filter-tabs {
+//       position: relative;
+//       padding:5px 0px 5px 60px;
+//       border-left: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+//       @include media-breakpoint-down(xl){
+//         padding: 0px;
+//         border: none;
+//         text-align: left;
+//         margin-bottom: 25px;
+//       }
+//     }
+
+//     li {
+//       position: relative;
+//       cursor: pointer;
+//       font-size: 16px;
+//       display: block;
+//       @include transition(all 300ms ease);
+//       margin: 25px 0px 25px;
+//       color: rgba($color: #ffffff, $alpha: 0.30);
+//       @include media-breakpoint-down(xl){
+//         margin-top:0px;
+//         margin-right:20px;
+//         display: inline-block;
+//       }
+//       &:before{
+//         position: absolute;
+//         content: '';
+//         left: -64px;
+//         top: 10px;
+//         width: 6px;
+//         height: 6px;
+//         opacity: 0;
+//         border-radius: 50px;
+//         display: inline-block;
+//         background-color: var(--theme-color-white);
+//         outline-offset: 7px;
+//         outline: 1px solid var(--theme-color-white);
+//         @include media-breakpoint-down(xl){
+//           display: none;
+//         }
+//       }
+//       &:hover::before{
+//         opacity: 1;
+//       }
+//       &.active::before{
+//         opacity: 1;
+//       }
+//     }
+
+//     .filter {
+//       &.active{
+//         color: var(--theme-color-white);
+//       }
+//       &:hover {
+//         color: var(--theme-color-white);
+//       }
+//     }
+//   }
+
+// }
+
+// .project-block_one.mix{
+//   display: none;
+// }
+
+// .project-block_one{
+//   position: relative;
+//   margin-bottom: 30px;
+//   .inner{
+//     position: relative;
+//     overflow: hidden;
+//     text-align: center;
+//     .image{
+//       position: relative;
+//       img{
+//         position: relative;
+//         width: 100%;
+//         display: block;
+//         @include transition(all 500ms ease);
+//         filter: grayscale(100%);
+//       }
+//     }
+//     &:hover img{
+//       transform: scale(1.04,1.04) rotate(2deg);
+//     }
+//     &:hover .content{
+//       opacity: 1;
+//       transform: scale(1,1);
+//     }
+//   }
+//   .content{
+//     position: absolute;
+//     left: 10px;
+//     bottom: 10px;
+//     right: 10px;
+//     opacity: 0;
+//     @include transition(all 500ms ease);
+//     padding: 30px 40px 30px;
+//     -webkit-backdrop-filter: blur(20px);
+//     backdrop-filter: blur(20px);
+//     transform: scale(0.7,1);
+//     @include media-breakpoint-down(xl){
+//       padding: 30px 20px 30px;
+//     }
+//     .title{
+//       a{
+//         color: var(--theme-color-white);
+//       }
+//     }
+//     .designation{
+//       margin-top: 8px;
+//       color: var(--theme-color-white);
+//     }
+//     .text{
+//       position: relative;
+//       margin-top: 25px;
+//       padding-top: 25px;
+//       margin-bottom: 25px;
+//       color: var(--theme-color-white);
+//       &:before{
+//         position: absolute;
+//         content: '';
+//         left: 50%;
+//         top: 0px;
+//         width: 120px;
+//         height: 1px;
+//         opacity: 0.30;
+//         transform: translateX(-50%);
+//         background-color: var(--theme-color-white);
+//       }
+//     }
+//     .arrow{
+//       position: relative;
+//       margin-top: 20px;
+//       width: 46px;
+//       height: 46px;
+//       margin: 0 auto;
+//       display: block;
+//       line-height: 44px;
+//       text-align: center;
+//       border-radius: 50px;
+//       transform: rotate(-45deg);
+//       color: var(--theme-color-white);
+//       border: 1px solid var(--theme-color-white);
+//       &:hover{
+//         color: var(--theme-color1);
+//         border-color: var(--theme-color-white);
+//         background-color: var(--theme-color-white);
+//       }
+//     }
+//   }
+// }
+
+// /*** 
+
+// ====================================================================
+//     Project Two
+// ====================================================================
+
+// ***/
+
+// .project-two {
+//   position: relative;
+//   overflow: hidden;
+//   padding: 110px 0px 90px;
+//   background-color: var(--theme-color1);
+
+//   .project-two_bg{
+//     @include overlay;
+//     background-size: cover;
+//   }
+
+//   @include media-breakpoint-down(sm){
+//     .sec-title{
+//       h2{
+//         br{
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+
+//   .project-two_circle{
+//     position: absolute;
+//     right: -200px;
+//     top: -40px;
+//     width: 436px;
+//     height: 474px;
+//     background-repeat: no-repeat;
+//   }
+
+//   .project-two-count{
+//     position: relative;
+//     font-size: 75px;
+//     line-height: 60px;
+//     font-weight: var(--h4-font-weight);
+//     color: var(--theme-color-white);
+//     .count-texts{
+//       position: relative;
+//       display: block;
+//       font-size: 20px;
+//       font-style: normal;
+//       font-weight: normal;
+      
+//     }
+//   }
+
+//   .outer-container{
+//     position: relative;
+//     max-width: 1810px;
+//     margin: 0 auto;
+//     padding: 0px 15px;
+//   }
+
+// }
+
+// .project-block_two{
+//   position: relative;
+//   margin-bottom: 30px;
+//   .inner{
+//     position: relative;
+//     .image{
+//       position: relative;
+//       overflow: hidden;
+//       img{
+//         position: relative;
+//         width: 100%;
+//         display: block;
+//         @include transition(all 500ms ease);
+//       }
+//     }
+//     &:hover img{
+//       filter: grayscale(100%);
+//       transform: scale(1.04,1.04) rotate(2deg);
+//     }
+//     &:hover .content{
+//       opacity: 1;
+//       transform: scale(1,1);
+//     }
+//   }
+//   .content{
+//     position: relative;
+//     padding-top: 30px;
+//     .title{
+//       position: relative;
+//       a{
+//         position: relative;
+//         color: var(--theme-color-white);
+//       }
+//     }
+//     .designation{
+//       position: relative;
+//       font-size: 16px;
+//       margin-top: 8px;
+//       color: var(--theme-color-white);
+//       @include media-breakpoint-down(sm){
+//         font-size: 14px;
+//       }
+//     }
+//     .arrow{
+//       position: absolute;
+//       right: 0px;
+//       top: 30px;
+//       width: 48px;
+//       height: 48px;
+//       font-size: 18px;
+//       line-height: 46px;
+//       text-align: center;
+//       border-radius: 50px;
+//       display: inline-block;
+//       transform: rotate(-45deg);
+//       color: var(--theme-color-white);
+//       border: 1px solid var(--theme-color-white);
+//       @include media-breakpoint-down(xxl){
+//         position: relative;
+//         top: 0px;
+//         margin-top: 20px;
+//       }
+//       &:hover{
+//         color: var(--theme-color-white);
+//         border-color: var(--theme-color3);
+//         background-color: var(--theme-color3);
+//       }
+//     }
+//   }
+// }
+
+// /*** 
+
+// ====================================================================
+//     Project Three
+// ====================================================================
+
+// ***/
+
+// .project-three {
+//   position: relative;
+//   overflow: hidden;
+//   padding: 110px 0px 110px;
+
+//   // Button Box
+//   .button-box{
+//       position: relative;
+//   }
+
+//   // Project Block Three
+
+//   .project-block_three{
+//     position: relative;
+//     margin-bottom: 30px;
+//     .inner{
+//       position: relative;
+//       background-color: var(--theme-color1);
+
+//       .pattern{
+//         @include overlay;
+//         top: 100px;
+//         background-position: left top;
+//         background-repeat: no-repeat;
+//       }
+
+//       .image{
+//         @include overlay;
+//         width: 50%;
+//         left: auto;
+//         background-size: cover;
+//         @include media-breakpoint-down(lg){
+//           position: relative;
+//           width: 100%;
+//           height: 450px;
+//           background-size: cover;
+//         }
+//       }
+
+//     }
+//     .content{
+//       position: relative;
+//       width: 50%;
+//       padding: 75px 30px 70px 70px;
+
+//       @include media-breakpoint-down(xl){
+//         padding: 40px 30px 40px 40px;
+//       }
+
+//       @include media-breakpoint-down(lg){
+//         width: 100%;
+//         padding: 30px 30px 30px 30px;
+//       }
+
+//     }
+
+//     .number{
+//       font-size: 18px;
+//       line-height: 1em;
+//       margin-bottom: 180px;
+//       color: var(--theme-color-white);
+//       sub{
+//         opacity: 0.50;
+//         font-size: 12px;
+//       }
+//       @include media-breakpoint-down(sm){
+//           margin-bottom: 50px;
+//       }
+//     }
+
+//     .icon{
+//       font-size: 66px;
+//       line-height: 1em;
+//       margin-bottom: 20px;
+//       color: var(--theme-color2);
+//       font-family: "flaticon-agencyo";
+//     }
+
+//     .title{
+//       font-size: 30px;
+//       margin-top: 25px;
+//       font-weight: 500;
+//       margin-bottom: 25px;
+//       color: var(--theme-color-white);
+//       text-transform: capitalize;
+//       a{
+//         color: var(--theme-color-white);
+//         &:hover{
+//           color: var(--theme-color2);
+//         }
+//       }
+//     }
+
+//     .text{
+//       font-size: 16px;
+//       line-height: 26px;
+//       font-weight: 400;
+//       max-width: 345px;
+//       margin-bottom: 25px;
+//       color: var(--theme-color-white);
+//       @include media-breakpoint-down(md){
+//         max-width: 100%;
+//       }
+//     }
+
+//   }
+
+// }
+
+// /*** 
+
+// ====================================================================
+//     Project Four
+// ====================================================================
+
+// ***/
+
+// .project-four {
+//   position: relative;
+//   overflow: hidden;
+//   padding-top: 40px;
+
+//   .swiper-horizontal{
+//       max-width: 850px;
+//       overflow: visible;
+//   }
+
+//   .swiper-slide.swiper-slide-active{
+//     .project-block_four{
+//       .inner{
+//         .image{
+//           &:before{
+//             opacity:1;
+//           }
+//           .content{
+//             opacity: 1;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   // Nav Box
+//     .nav-box{
+//         position: absolute;
+//         left: 60px;
+//         top: 50%;
+//         right: 60px;
+//         z-index: 1;
+//         transform: translateY(-50%);
+
+//         @include media-breakpoint-down(xxl){
+//             position:relative;
+//             left:auto;
+//             top:auto;
+//             right:auto;
+//             margin-top: 35px;
+//             text-align: center;
+//         }
+
+//         .single-button-prev{
+//             position: relative;
+//             width: 62px;
+//             height: 62px;
+//             text-align: center;
+//             line-height: 62px;
+//             border-radius: 150px;
+//             display: inline-block;
+//             color:  var(--theme-color-white);
+//             background-color: var(--theme-color1);
+//             @include transition(all 300ms ease);
+//             @include media-breakpoint-down(xxl){
+//                 position: relative;
+//                 margin: 0px 5px;
+//             }
+//             &:after{
+//                 display:none;
+//             }
+//             &:hover{
+//                 color:  var(--theme-color-white);
+//                 background-color:  var(--theme-color2);
+//             }
+//         }
+
+//         .single-button-next{
+//             position: absolute;
+//             right:0px;
+//             width: 62px;
+//             height: 62px;
+//             text-align: center;
+//             line-height: 62px;
+//             border-radius: 150px;
+//             display: inline-block;
+//             color:  var(--theme-color-white);
+//             background-color: var(--theme-color1);
+//             @include transition(all 300ms ease);
+//             @include media-breakpoint-down(xxl){
+//                 position: relative;
+//                 margin: 0px 5px;
+//             }
+//             &:after{
+//                 display:none;
+//             }
+//             &:hover{
+//                 color: var(--theme-color-white);
+//                 background-color:  var(--theme-color2);
+//             }
+//         }
+
+//     }
+
+// }
+
+//   // Project Block Four
+
+//   .project-block_four{
+//     position: relative;
+//     margin-bottom: 30px;
+//     .inner{
+//       position: relative;
+//       .image{
+//         position: relative;
+//         img{
+//           width: 100%;
+//         }
+//         &:before{
+//           position: absolute;
+//           content: "";
+//           left: 0px;
+//           bottom: 0px;
+//           right: 0px;
+//           height: 70%;
+//           z-index: 1;
+//           opacity: 0;
+//           transition: all 500ms ease;
+//           background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #031F1C);
+//         }
+//       }
+//     }
+//     .content{
+//       position:absolute;
+//       left:70px;
+//       bottom:70px;
+//       z-index: 2;
+//       opacity: 0;
+//       max-width: 350px;
+
+//       @include media-breakpoint-down(lg){
+//         left: 30px;
+//         bottom: 30px;
+//       }
+
+//       @include media-breakpoint-down(md){
+//           max-width: 100%;
+//       }
+
+//       @include media-breakpoint-down(sm){
+//         left: 15px;
+//         bottom: 15px;
+//       }
+
+//       .title{
+//         position: relative;
+//         @include media-breakpoint-down(sm){
+//             font-size: 20px;
+//         }
+//         a{
+//           color: var(--theme-color-white);
+//         }
+//       }
+//       .text{
+//         position: relative;
+//         margin-top: 20px;
+//         color: var(--theme-color-white);
+//         @include media-breakpoint-down(sm){
+//             display: none;
+//         }
+//       }
+
+//       // Option Box
+//       .options-box{
+//           position: relative;
+//           margin-top: 30px;
+//           display: inline-block;
+//           @include media-breakpoint-down(sm){
+//               margin-top: 20px;
+//           }
+          
+//       }
+
+//     }
+//   }
+
+// /*** 
+
+// ====================================================================
+//     Project Five
+// ====================================================================
+
+// ***/
+
+// .project-five {
+//   position: relative;
+//   overflow: hidden;
+//   padding-bottom: 10px;
+
+//   .auto-container{
+//     max-width: 1890px;
+//   }
+
+// }
+
+//   // Project Block Five
+//   .project-block_five{
+//     position: relative;
+//     margin-bottom: 30px;
+
+//     &:nth-child(2){
+//       .inner{
+//         .content-outer{
+//           background-color: var(--theme-color1);
+//           .content{
+//             .btn-box{
+//               .read-more{
+//                 color: var(--theme-color1);
+//                 background-color: var(--theme-color-white);
+//                 &:hover{
+//                   color: var(--theme-color-white);
+//                   background-color: var(--theme-color2);
+//                 }
+//               }
+//               .arrow-btn{
+//                 color: var(--theme-color1);
+//                 background-color: var(--theme-color-white);
+//                 &:hover{
+//                   color: var(--theme-color-white);
+//                   background-color: var(--theme-color2);
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .inner{
+//       position: relative;
+      
+//       .image{
+//         position: relative;
+//         border-radius: 14px;
+//         overflow: hidden;
+//         height: 100%;
+//         img{
+//           width: 100%;
+//           height: 100%;
+//         }
+//       }
+
+//       .content-outer{
+//         position: relative;
+//         height: 100%;
+//         overflow: hidden;
+//         padding: 65px 50px;
+//         border-radius: 14px;
+//         background-position: right bottom;
+//         background-repeat: no-repeat;
+//         background-color: var(--theme-color2);
+
+//         @include media-breakpoint-down(xxxl){
+//           padding: 30px 30px;
+//         }
+
+//         @include media-breakpoint-down(md){
+//           margin-top: 10px;
+//         }
+
+//         .title{
+//           position: relative;
+//           font-size: 30px;
+//           font-weight: 500;
+//           line-height: 40px;
+//           color: var(--theme-color-white);
+//           @include media-breakpoint-down(xxl){
+//               font-size: 22px;
+//               line-height: 32px;
+//           }
+//         }
+//         .text{
+//           font-size: 16px;
+//           line-height: 26px;
+//           color: var(--theme-color-white);
+//           @include media-breakpoint-down(md){
+//             margin-top: 40px;
+//           }
+//         }
+//         .content{
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: space-between;
+//           height: 100%;
+
+//           //Btn Box
+//           .btn-box{
+//               position: relative;
+//               margin-top: 30px;
+//               @include media-breakpoint-down(xxl){
+//                 .theme-btn{
+//                     font-size: 15px;
+//                     padding: 12px 20px;
+//                 }
+//               }
+//           }
+
+//         }
+//       }
+
+//     }
+//   }
+
+// /*** 
+
+// ====================================================================
+//     Project Six
+// ====================================================================
+
+// ***/
+
+// .project-six {
+//   position: relative;
+//   overflow: hidden;
+//   padding-top: 120px;
+
+//   .auto-container{
+//     max-width: 1810px;
+//   }
+
+//   .sec-title_two{
+//       margin-bottom: 105px;
+//       margin-left: 250px;
+//       @include media-breakpoint-down(xxl){
+//           margin-left: 0px;
+//       }
+//       @include media-breakpoint-down(lg){
+//           margin-bottom: 50px;
+//       }
+//   }
+
+// }
+
+// .project-six_outer{
+//   position: relative;
+//   display: flex;
+//   gap: 30px;
+//   margin-bottom: 90px;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   @include media-breakpoint-down(lg){
+//       margin-bottom: 0px;
+//   }
+
+//   @include media-breakpoint-down(md){
+//       flex-wrap: wrap;
+//       margin-bottom: 30px;
+//   }
+
+// }
+
+// //Project Block Six
+
+// .project-block_six {
+//   position: relative;
+//   margin-bottom: 30px;
+
+//   @include media-breakpoint-down(md){
+//       margin-bottom: 0px;
+//   }
+
+//   .inner {
+//     position: relative;
+//     overflow: hidden;
+
+//     &:hover {
+//       .image img {
+//         opacity: 0.6;
+//         transform: scale(1.05);
+//       }
+//       .overlay {
+//         opacity: 1;
+//         bottom: 70px;
+//         @include media-breakpoint-down(lg){
+//           bottom: 30px;
+//         }
+//         @include media-breakpoint-down(sm){
+//           bottom: 15px;
+//         }
+//       }
+//     }
+//   }
+
+//   .image {
+//     position: relative;
+//     border-radius: 5px;
+//     overflow: hidden;
+//     background-color: var(--theme-color2);
+
+//     img {
+//       position: relative;
+//       width: 100%;
+//       display: block;
+//       transition: all 500ms ease;
+//     }
+//   }
+
+//   .overlay {
+//     position: absolute;
+//     left: 70px;
+//     bottom: -170px;
+//     max-width: 350px;
+//     height: auto;
+//     z-index: 20;
+//     opacity: 0;
+//     @include transition(all 300ms ease);
+//     @include media-breakpoint-down(lg){
+//         left: 30px;
+//     }
+//     @include media-breakpoint-down(sm){
+//       left:15px
+//     }
+//   }
+
+//   .title {
+//     position: relative;
+//     font-size: 30px;
+//     font-weight: 500;
+//     display: inline-block;
+//     text-transform: capitalize;
+//     color: var(--theme-color-white);
+//     @include media-breakpoint-down(lg){
+//         font-size: 22px;
+//     }
+//     a {
+//       position: relative;
+//       display: inline-block;
+//       color: var(--theme-color-white);
+//       &:hover {
+//         color: var(--theme-color1);
+//       }
+//     }
+//   }
+
+//   .text {
+//     position: relative;
+//     margin-top: 20px;
+//     font-size: 16px;
+//     line-height: 26px;
+//     text-transform: capitalize;
+//     color: var(--theme-color-white);
+//     @include media-breakpoint-down(lg){
+//         display: none;
+//     }
+//   }
+
+//   //Btn Box
+//   .btn-box{
+//       position: relative;
+//       margin-top: 30px;
+//       display: inline-block;
+//       @include media-breakpoint-down(lg){
+//           margin-top: 15px;
+//       }
+//   }
+
+// }
+

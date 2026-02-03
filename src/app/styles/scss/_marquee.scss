@@ -1,0 +1,370 @@
+/***
+
+====================================================================
+    Marquee Section
+====================================================================
+
+***/
+
+.marquee-section {
+  position: relative;
+  background-color: var(--theme-color1);
+  padding: 60px 0;
+}
+
+.marquee {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--theme-color4);
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &:before {
+          position: absolute;
+          content: "";
+          left: -85px;
+          bottom: 0;
+          height: 140px;
+          width: 240px;
+          border: 1px solid var(--theme-color-black);
+          border-radius: 100px;
+          @include media-breakpoint-down(lg){
+            height: 101px;
+          }
+    }
+
+    .title {
+      color: var(--theme-color-black);
+      text-transform: uppercase;
+      margin: 0 57px;
+      position: relative;
+      font-weight: 700;
+      font-size: 70px;
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--theme-color-black);
+      padding: 23.5px 80px;
+      border-radius: 100px;
+      @include media-breakpoint-down(lg){
+        font-size: 40px;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/* Second marquee section Two */
+
+.marquee-section-two {
+  position: relative;
+  background-color: var(--theme-color1);
+  padding: 30px 0;
+
+  @include media-breakpoint-down (xl){
+    padding: 25px 0;
+  }
+}
+
+.marquee-two {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--theme-color-black);
+    font-weight: 700;
+    margin: 0 43px;
+    position: relative;
+    font-family: var(--heading-font-family);
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: -56px;
+      top: 10px;
+      height: 25px;
+      width: 25px;
+      background: url(/assets/images/home-2/marque-icon.png);
+      -webkit-animation-name: rotateme;
+      animation-name: rotateme;
+      -webkit-animation-duration: 06s;
+      animation-duration: 06s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+// marque three
+
+.marquee-three {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+    font-size: 80px;
+    line-height: 1.2;
+    color: var(--theme-color-white);
+    font-weight: 800;
+    margin: 0 90px;
+    position: relative;
+    font-family: var(--heading-font-family);
+
+    &:before {
+      content: "";
+      content: "";
+      position: absolute;
+      left: -121px;
+      top: 19px;
+      height: 65px;
+      width: 65px;
+      background: url(/assets/images/home-2/arrwo-icon.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+
+
+/* marquee-section-h3 */
+
+.marquee-section-h3 {
+  position: relative;
+  background-color: var(--theme-color1);
+  padding: 22px 0;
+
+  @include media-breakpoint-down (xl){
+    padding: 25px 0;
+  }
+}
+
+.marquee-h3 {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+    color: var(--theme-color-black);
+    font-family: var(--heading-font-family);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    margin: 0 75px;
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      left: -99px;
+      top: 0;
+      height: 52px;
+      width: 52px;
+      background: url(/assets/images/home-3/marque-icon.png);
+      -webkit-animation-name: rotateme;
+      animation-name: rotateme;
+      -webkit-animation-duration: 06s;
+      animation-duration: 06s;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/***
+
+====================================================================
+    Marquee Section Style Three
+====================================================================
+
+***/
+.style_three {
+  padding: 40px 0;
+
+  .marquee {
+    .text {
+
+      &:before {
+        display: none;
+      }
+
+      h1 {
+        margin: 0 55px;
+        font-weight: 800;
+        font-size: 115px;
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+
+  }
+}
+
+.marquee-section-two.four {
+  position: relative;
+  background-color: var(--theme-color2);
+  padding: 37px 0;
+}
+
+.marquee-two.four {
+  .text {
+    font-size: 38px;
+    margin: 0 75px;
+    line-height: 2;
+    text-transform: capitalize;
+
+    &:before {
+      left: -101px;
+      top: 13px;
+      height: 58px;
+      width: 58px;
+      background: url(/assets/images/home-4/marque-shap.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+//  Marquee Section Five
+
+.marquee-section-two.five {
+  position: relative;
+  background-color: var(--theme-color1);
+  padding: 27px 0;
+}
+
+.marquee-two.five {
+  .text {
+    font-size: 38px;
+    margin: 0 75px;
+    line-height: 2;
+    text-transform: capitalize;
+    font-size: 600;
+    color: var(--theme-color3);
+
+    &:before {
+      left: -101px;
+      top: 13px;
+      height: 58px;
+      width: 58px;
+      background: url(/assets/images/home-6/rotate.png);
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+
+/* Global keyframes — declared only once */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}

@@ -1,0 +1,1 @@
+export const SITE_NAME = "Nexella | IT Solutions & Technology React Next JS Template";

@@ -1,0 +1,211 @@
+/*** 
+
+====================================================================
+    Skill Section 
+====================================================================
+
+***/
+
+.skill-section {
+    position: relative;
+
+    .outer-box {
+        max-width: 1627px;
+        margin: 0 auto;
+    }
+
+    .inner-column {
+        margin-left: 5px;
+        width: 81%;
+    }
+
+    .sec-title {
+        margin-bottom: 50px;
+        h2 {
+            @media (max-width: 1599.98px) {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .sub-title {
+            padding-top: 0;
+        }
+    }
+
+    .skill-img {
+        position: relative;
+        z-index: 1;
+
+        .skill-icon-box {
+            position: absolute;
+            bottom: 0;
+            right: 40px;
+            background: var(--body-bg);
+            text-align: center;
+            border-radius: 16px;
+            width: 332px;
+            padding: 34px 30px 24px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            .skill-coun-icon {
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+                background: var(--theme-color1);
+                border-radius: 50%;
+                margin-top: -14px;
+            }
+
+            .skill-count {
+                text-align: left;
+
+                span.count-text {
+                    font-weight: 600;
+                    font-size: 30px;
+                    line-height: 1;
+                    color: var(--theme-color-white);
+                    font-family: var(--sec-title-font-family);
+                }
+
+                span.plus {
+                    font-family: var(--sec-title-font-family);
+                    font-weight: 600;
+                    font-size: 30px;
+                    position: relative;
+                    top: 0px;
+                    left: 0;
+                    color: var(--theme-color-white);
+                }
+
+                h6.counter-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: var(--text-color);
+                    font-family: var(--body-font-family);
+                }
+            }
+        }
+
+        .skill-img2 {
+            position: absolute;
+            top: 0;
+            z-index: -1;
+            right: 40px;
+        }
+        .images-one {            
+            mask-image: url(/assets/images/home-2/skill-mask1.png);
+            mask-size: contain;
+            mask-position: center center;
+            mask-repeat: no-repeat;
+        }
+        .images-two {            
+            mask-image: url(/assets/images/home-2/skill-mask2.png);
+            mask-size: contain;
+            mask-position: center center;
+            mask-repeat: no-repeat;
+        }
+
+        .skill-dot {
+            position: absolute;
+            top: 41px;
+            left: 44%;
+            z-index: -1;
+        }
+    }
+
+    .skill-rotate {
+        position: absolute;
+        right: -14%;
+        bottom: -37%;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+
+    .skill-sp2 {
+        position: absolute;
+        right: 9%;
+        top: 15%;
+    }
+    .skills .skill-item .skill-header {
+        margin-bottom: 19px;
+    }
+    .skills .skill-item {
+        margin-bottom: 30px;
+    }
+
+}
+
+
+/*================================
+Progress Bar
+=================================*/
+
+.skills {
+    position: relative;
+    margin-bottom: 50px;
+
+    .skill-item {
+        position: relative;
+        margin-bottom: 25px;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
+
+        .skill-header {
+            position: relative;
+            z-index: 3;
+            margin-bottom: 12px;
+
+            .skill-title {
+                position: relative;
+                font-size: 20px;
+                font-weight: 500;
+                margin-bottom: 0;
+                color: var(--theme-color-white);
+                font-family: var(--heading-font-family);
+            }
+        }
+
+        .skill-bar {
+            position: relative;
+            width: 100%;
+            height: 7px;
+            border-radius: 10px;
+
+            .bar-inner {
+                position: relative;
+                width: 100%;
+                height: 5px;
+                background: rgba(255, 255, 255, .2);
+                border-radius: 10px;
+
+                .bar {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    height: 5px;
+                    width: 0px;
+                    transition: all 3000ms ease;
+                    background: var(--theme-color1);
+                    border-radius: 30px;
+                }
+
+                .skill-percentage {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    font-size: 20px;
+                    font-weight: 500;
+                    margin-bottom: 18px;
+                    color: var(--theme-color3);
+                }
+            }
+        }
+    }
+}

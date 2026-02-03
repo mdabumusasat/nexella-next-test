@@ -1,0 +1,933 @@
+/***
+
+====================================================================
+    Accordion Style
+====================================================================
+
+***/
+
+.accordion-box {
+  position: relative;
+
+  .block {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 6px 0px 25px 100px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+    @include media-breakpoint-down(md) {
+      padding: 0px 0px 20px 100px;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-left: 0px;
+    }
+    .number {
+      position: absolute;
+      left: 0px;
+      top: 18px;
+      font-size: 16px;
+      line-height: 1em;
+      color: var(--text-color);
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .acc-btn {
+      position: relative;
+      cursor: pointer;
+      line-height: 32px;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--theme-color1);
+      @include transition(all 500ms ease);
+
+      @include media-breakpoint-down(md) {
+        font-size: 18px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 40px;
+      }
+
+      .icon-outer {
+        position: absolute;
+        right: 0px;
+        top: -6px !important;
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--theme-color1);
+        @include transition(all 500ms ease);
+        font-family: "Font Awesome 5 Pro";
+        font-size: var(--body-font-size);
+        background-color: var(--theme-color-white);
+        @include media-breakpoint-down(md) {
+          height: 36px;
+          line-height: 36px;
+          top: 0px !important;
+          width: 36px;
+        }
+        @include media-breakpoint-down(sm) {
+          right: 0px;
+        }
+        .icon {
+          position: absolute;
+          right: 0px;
+          width: 46px;
+          height: 46px;
+          line-height: 46px;
+          border-radius: 50px;
+          color: var(--theme-color1);
+          @include transition(all 500ms ease);
+          box-shadow: 0px 0px 10px rgba($color: #000000, $alpha: 0.2);
+          @include media-breakpoint-down(md) {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+          }
+        }
+      }
+
+      &.active {
+        .icon-outer {
+          .icon-plus {
+            transform: rotate(-45deg);
+            color: var(--theme-color-white);
+            border-color: var(--theme-color2);
+            background-color: var(--theme-color2);
+          }
+        }
+      }
+    }
+
+    .acc-content {
+      display: none;
+      position: relative;
+      .content {
+        position: relative;
+        padding: 20px 0px 0px 0px;
+        .text {
+          line-height: 28px;
+          font-size: 16px;
+          max-width: 355px;
+          color: var(--text-color);
+        }
+      }
+      &.current {
+        display: block;
+      }
+    }
+  }
+
+  &.style-two {
+    .block {
+      padding-left: 0px;
+      .icon-outer {
+        .icon {
+          box-shadow: inherit;
+        }
+      }
+      .acc-btn {
+        &.active {
+          .icon-outer {
+            .icon-plus {
+              transform: rotate(-90deg);
+            }
+          }
+        }
+      }
+      .acc-content {
+        .content {
+          .text {
+            max-width: 530px;
+          }
+        }
+      }
+    }
+    .icon-outer {
+      top: -8px !important;
+      @include media-breakpoint-down(md) {
+        top: 0px !important;
+      }
+    }
+  }
+
+  &.style-three {
+    .block {
+      border-radius: 10px;
+      padding: 17px 30px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      .acc-content {
+        .content {
+          margin-top: 20px;
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+          .text {
+            max-width: 580px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/***
+
+====================================================================
+    Accordion Style Two
+====================================================================
+
+***/
+
+.accordion-box_two {
+  position: relative;
+
+  .block {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--theme-color-white);
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.08);
+
+    .accordion-inner {
+      position: relative;
+      max-width: 1290px;
+      margin: 0 auto;
+    }
+
+    .number {
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      font-size: 120px;
+      line-height: 1em;
+      color: #f3f3f3;
+      font-weight: 500;
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .acc-btn {
+      position: relative;
+      cursor: pointer;
+      font-weight: 500;
+      line-height: 30px;
+      font-size: 48px;
+      padding: 42px 45px 38px 180px;
+      color: var(--theme-color1);
+      text-transform: capitalize;
+      @include transition(all 500ms ease);
+
+      @include media-breakpoint-down(xl) {
+        font-size: 34px;
+        padding-left: 15px;
+      }
+
+      @include media-breakpoint-down(sm) {
+        font-size: 20px;
+        padding: 25px 45px 25px 15px;
+      }
+
+      .icon-outer {
+        position: absolute;
+        right: 20px;
+        top: 35px;
+        width: 44px;
+        height: 44px;
+        font-size: 26px;
+        line-height: 44px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--theme-color-white);
+        @include transition(all 500ms ease);
+        font-family: "Font Awesome 5 Pro";
+        color: var(--theme-color1);
+        @include media-breakpoint-down(sm) {
+          right: 0px;
+          top: 18px;
+          font-size: 20px;
+        }
+        .icon {
+          position: absolute;
+          right: 0px;
+          width: 44px;
+          height: 44px;
+          line-height: 44px;
+          color: var(--main-color);
+          @include transition(all 500ms ease);
+        }
+
+        .icon-plus {
+          opacity: 1;
+        }
+
+        .icon-minus {
+          opacity: 0;
+        }
+      }
+
+      &.active {
+        .icon-outer {
+          .icon-minus {
+            opacity: 1;
+          }
+
+          .icon-plus {
+            opacity: 0;
+          }
+          color: var(--theme-color-white);
+          color: var(--theme-color2);
+        }
+      }
+      &.active {
+        display: none;
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        padding: 0px 40px 30px 35px;
+
+        .text {
+          color: #767676;
+          line-height: 28px;
+          font-size: var(--font-18);
+        }
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+  }
+
+  .accordion-content {
+    position: relative;
+    display: none;
+    padding: 40px 0px 40px;
+    background-color: var(--theme-color1);
+    .accordion-shadow {
+      @include overlay;
+      background-position: right center;
+      background-repeat: no-repeat;
+      @include media-breakpoint-down(xl) {
+        display: none;
+      }
+    }
+    .content_inner {
+      position: relative;
+      padding-left: 180px;
+      max-width: 1290px;
+      margin: 0px auto 15px;
+
+      @include media-breakpoint-down(sm) {
+        padding-left: 0px;
+      }
+
+      .number_two {
+        position: absolute;
+        left: 15px;
+        top: 0px;
+        font-size: 80px;
+        line-height: 1em;
+        font-weight: 700;
+        color: var(--theme-color-white);
+        @include media-breakpoint-down(sm) {
+          position: relative;
+          margin-bottom: 25px;
+        }
+      }
+      h2 {
+        position: relative;
+        font-weight: 700;
+        font-size: 44px;
+        color: var(--theme-color-white);
+        @include media-breakpoint-down(sm) {
+          left: 15px;
+          font-size: 30px;
+          word-wrap: break-word;
+        }
+      }
+    }
+  }
+}
+
+// Prod Tabs
+
+.prod-tabs {
+  position: relative;
+
+  @include media-breakpoint-down(xxl) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tab-btns {
+    position: relative;
+    margin-top: 320px;
+
+    @include media-breakpoint-down(xxl) {
+      margin-top: 70px;
+    }
+
+    @include for-md {
+      margin-top: 30px;
+    }
+
+    .tab-btn {
+      position: relative;
+      line-height: 24px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 7px 25px;
+      margin-right: 10px;
+      border-radius: 50px;
+      display: inline-block;
+      transition: all 500ms ease;
+      text-transform: uppercase;
+      color: rgba($color: #ffffff, $alpha: 0.6);
+      border: 1px solid rgba($color: #ffffff, $alpha: 0.6);
+
+      &:last-child {
+        margin-right: 0px;
+      }
+
+      @include for-lg {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        color: var(--theme-color-white);
+        border: 1px solid rgba($color: #ffffff, $alpha: 1);
+      }
+      &.active-btn {
+        color: var(--theme-color-white);
+        border: 1px solid rgba($color: #ffffff, $alpha: 1);
+      }
+    }
+  }
+
+  .tabs-content {
+    position: relative;
+    padding: 0px 0px 0px;
+    margin-top: -50px;
+
+    @include for-lg {
+      margin-top: 20px;
+    }
+
+    .text {
+      position: relative;
+      font-size: 18px;
+      line-height: 30px;
+      margin-bottom: 30px;
+      color: var(--theme-color-white);
+    }
+
+    .tab {
+      position: relative;
+      display: none;
+
+      &.active-tab {
+        display: block;
+      }
+    }
+  }
+}
+
+/***
+
+====================================================================
+    Accordion Style Three
+====================================================================
+
+***/
+
+.accordion-box_three {
+  position: relative;
+
+  .block {
+    position: relative;
+    margin-bottom: 13px;
+    padding: 10px 0px 22px 100px;
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0px;
+    }
+    &:before {
+      position: absolute;
+      content: "";
+      right: 0px;
+      bottom: 0px;
+      width: 500%;
+      height: 1px;
+      opacity: 0.07;
+      background-color: var(--theme-color1);
+    }
+    &.active-block {
+      .number {
+        color: var(--theme-color1);
+        border-color: var(--theme-color2);
+        background-color: var(--theme-color2);
+      }
+    }
+    .number {
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      font-size: 16px;
+      line-height: 1em;
+      padding: 7px 12px;
+      border-radius: 50px;
+      font-weight: 500;
+      color: var(--text-color);
+      text-transform: uppercase;
+      background-color: #fffaf0;
+      border: 1px solid rgba($color: #000000, $alpha: 0.07);
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    .acc-btn {
+      position: relative;
+      cursor: pointer;
+      line-height: 32px;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--theme-color1);
+      @include transition(all 500ms ease);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+      }
+
+      .icon-outer {
+        position: absolute;
+        right: 0px;
+        top: -8px;
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--theme-color1);
+        @include transition(all 500ms ease);
+        font-family: "Font Awesome 5 Pro";
+        font-size: var(--body-font-size);
+        background-color: var(--theme-color2);
+        @include media-breakpoint-down(sm) {
+          right: 0px;
+        }
+        .icon {
+          position: absolute;
+          right: 0px;
+          width: 46px;
+          height: 46px;
+          overflow: hidden;
+          line-height: 46px;
+          border-radius: 50px;
+          color: var(--theme-color1);
+          @include transition(all 500ms ease);
+        }
+      }
+
+      &.active {
+        .icon-outer {
+          .icon-plus {
+            transform: rotate(-45deg);
+            color: var(--theme-color-white);
+            border-color: var(--theme-color3);
+            background-color: var(--theme-color3);
+          }
+        }
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        padding: 20px 0px 0px 0px;
+        .text {
+          line-height: 28px;
+          font-size: 16px;
+          max-width: 355px;
+          color: var(--text-color);
+          @include media-breakpoint-down(xl) {
+            max-width: 100%;
+          }
+        }
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+  }
+}
+
+/***
+
+====================================================================
+    Accordion Style Four
+====================================================================
+
+***/
+
+.accordion-box_four {
+  position: relative;
+
+  .block {
+    position: relative;
+    padding: 22px 0px 22px 0px;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.07);
+
+    .acc-btn {
+      position: relative;
+      cursor: pointer;
+      line-height: 32px;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--theme-color1);
+      @include transition(all 500ms ease);
+
+      @include media-breakpoint-down(sm) {
+        font-size: 18px;
+        padding-right: 45px;
+      }
+
+      .icon-outer {
+        position: absolute;
+        right: 0px;
+        top: -8px;
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        border-radius: 50px;
+        color: var(--theme-color1);
+        @include transition(all 500ms ease);
+        font-family: "Font Awesome 5 Pro";
+        font-size: var(--body-font-size);
+        border: 1px solid rgba($color: #000000, $alpha: 0.07);
+        @include media-breakpoint-down(sm) {
+          right: 0px;
+        }
+        .icon {
+          position: absolute;
+          right: 0px;
+          width: 46px;
+          height: 46px;
+          overflow: hidden;
+          line-height: 46px;
+          border-radius: 50px;
+          color: var(--theme-color1);
+          @include transition(all 500ms ease);
+        }
+      }
+
+      &.active {
+        .icon-outer {
+          .icon-plus {
+            transform: rotate(-90deg);
+            color: var(--theme-color-white);
+            border-color: var(--theme-color2);
+            background-color: var(--theme-color2);
+          }
+        }
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        padding: 20px 0px 20px 0px;
+        .text {
+          line-height: 28px;
+          font-size: 16px;
+          max-width: 530px;
+          margin-bottom: 30px;
+          color: var(--text-color);
+          @include media-breakpoint-down(xl) {
+            max-width: 100%;
+            br {
+              display: none;
+            }
+          }
+        }
+        .column {
+          .text {
+            @include media-breakpoint-down(md) {
+              margin-top: 30px;
+            }
+            @include media-breakpoint-down(sm) {
+              margin-top: 0px;
+            }
+          }
+        }
+        .image {
+          position: relative;
+          @include media-breakpoint-down(md) {
+            margin-top: 35px;
+          }
+          @include media-breakpoint-down(sm) {
+            margin-bottom: 25px;
+          }
+          img {
+            width: 100%;
+            display: block;
+          }
+        }
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+
+    .faq-four_list {
+      position: relative;
+      li {
+        position: relative;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: var(--text-color);
+        i {
+          position: relative;
+          margin-right: 7px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  &.style-two {
+    .block {
+      padding: 23px 0px 23px 0px;
+      color: var(--theme-color-white);
+      border-color: rgba($color: #ffffff, $alpha: 0.1);
+      .acc-btn {
+        padding-right: 50px;
+        color: var(--theme-color-white);
+        .icon-outer {
+          color: var(--theme-color1);
+          border: none;
+          background-color: var(--theme-color-white);
+        }
+        &.active {
+          .icon-outer {
+            .icon-plus {
+              background-color: var(--theme-color4);
+            }
+          }
+        }
+      }
+      .acc-content {
+        .content {
+          .text {
+            color: var(--theme-color-white);
+            @include media-breakpoint-down(md) {
+              br {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+
+      .faq-four_list {
+        li {
+          color: var(--theme-color-white);
+        }
+      }
+    }
+  }
+
+  &.style-three {
+    .block {
+      .acc-btn {
+        .icon-outer {
+          top: 0px;
+          width: auto;
+          height: auto;
+          border: none;
+          line-height: inherit;
+          .icon {
+            width: auto;
+            height: auto;
+            border: none;
+            line-height: inherit;
+          }
+          // .icon-plus{
+
+          // }
+          .icon-minus {
+            opacity: 0;
+          }
+        }
+      }
+      &.active-block {
+        .acc-btn.active {
+          .icon-outer {
+            .icon-plus {
+              opacity: 0;
+              background: none;
+            }
+            .icon-minus {
+              opacity: 1;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/***
+
+====================================================================
+    Accordion Style Five
+====================================================================
+
+***/
+
+.accordion-box_five {
+  position: relative;
+
+  .block {
+    position: relative;
+    padding: 26px 0px 26px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.07);
+
+    &:last-child {
+      border-bottom: 1px solid rgba($color: #000000, $alpha: 0.07);
+    }
+
+    .acc-btn {
+      position: relative;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--theme-color2);
+      @include transition(all 500ms ease);
+
+      .title {
+        position: relative;
+        font-size: 16px;
+        width: 200px;
+        display: inline-block;
+        color: var(--theme-color2);
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+
+      .icon-outer {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        color: var(--text-color);
+        font-size: var(--body-font-size);
+        @include transition(all 500ms ease);
+      }
+
+      &.active {
+        .icon-outer {
+          .icon-plus {
+            color: var(--theme-color2);
+          }
+        }
+      }
+    }
+
+    .acc-content {
+      position: relative;
+      display: none;
+
+      .content {
+        position: relative;
+        .text {
+          line-height: 28px;
+          font-size: 16px;
+          max-width: 530px;
+          margin-bottom: 30px;
+          color: var(--text-color);
+          @include media-breakpoint-down(xl) {
+            max-width: 100%;
+            br {
+              display: none;
+            }
+          }
+        }
+        .column {
+          .text {
+            @include media-breakpoint-down(md) {
+              margin-top: 30px;
+            }
+            @include media-breakpoint-down(sm) {
+              margin-top: 0px;
+            }
+          }
+        }
+      }
+
+      &.current {
+        display: block;
+      }
+    }
+
+    .faq-five_list {
+      position: relative;
+      margin-left: 50%;
+      margin-top: -25px;
+      @include transition(all 500ms ease);
+      li {
+        position: relative;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: var(--text-color);
+        i {
+          position: relative;
+          margin-right: 7px;
+        }
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        margin: 0px;
+        margin-top: 35px;
+      }
+    }
+  }
+}

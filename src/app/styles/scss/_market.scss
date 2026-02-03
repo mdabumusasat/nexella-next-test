@@ -1,0 +1,666 @@
+/*** 
+
+====================================================================
+    Market Section
+====================================================================
+
+***/
+
+.market-one {
+    position: relative;
+    .auto-container{
+        position: relative;
+        max-width: 1940px;
+        .row{
+            margin: 0px -5px;
+            .column{
+                padding: 0px 5px;
+            }
+        }
+
+    }
+
+    .market-block_one,
+    .market-block_two {
+        height: 100%;
+        
+        &-inner {
+            height: 100%;
+        }
+    }
+
+}
+
+// Market Block One
+
+.market-block_one{
+    position: relative;
+    .inner{
+        position: relative;
+        height: 100%;
+    }
+    .image{
+        position: relative;
+        height: 100%;
+        img{
+            position: relative;
+            width: 100%;
+            display: block;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .shadow{
+        z-index: 1;
+        @include overlay;
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+    .shadow-two{
+        z-index: 1;
+        @include overlay;
+        background-position: center bottom;
+        background-repeat: repeat-x;
+    }
+    .content{
+        position: absolute;
+        left: 220px;
+        bottom: 70px;
+        z-index: 2;
+        @include media-breakpoint-down(xxl){
+            left:100px;
+        }
+        @include media-breakpoint-down(xl){
+            left: 70px;
+        }
+        @include media-breakpoint-down(lg){
+            left: 40px;
+        }
+
+        @include media-breakpoint-down(sm){
+            left: 30px;
+            bottom: 30px;
+        }
+        
+        .title{
+            position: relative;
+            a{
+                position: relative;
+                color: var(--theme-color-white);
+            }
+            @include media-breakpoint-down(md){
+                font-size: 28px;
+                line-height: 38px;
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 24px;
+                line-height: 34px;
+            }
+        }
+        .subtitle{
+            position: relative;
+            font-size: 18px;
+            padding-top: 40px;
+            margin-top: 35px;
+            color: var(--theme-color-white);
+            border-top: 1px solid rgba($color: #ffffff, $alpha: 0.20);
+            @include media-breakpoint-down(sm){
+                padding-top: 15px;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+// Market Block Two
+
+.market-block_two{
+    position: relative;
+
+    .shadow{
+        @include overlay;
+        background-position: right top;
+        background-repeat: no-repeat;
+    }
+
+    .pattern{
+        @include overlay;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+    }
+
+    .inner{
+        position: relative;
+        padding: 85px 75px;
+        @include media-breakpoint-down(xxl){
+            padding: 40px 40px;
+        }
+        @include media-breakpoint-down(xl){
+            padding: 30px 30px;
+        }
+        @include media-breakpoint-down(lg){
+            padding: 30px 30px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 25px 25px;
+        }
+        background-color: var(--theme-color2);
+        .sec-title{
+            h2{
+                font-weight: 500;
+                @include media-breakpoint-down(xxl){
+                    font-size: 38px;
+                    line-height: 48px;
+                }
+                @include media-breakpoint-down(xl){
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+    }
+
+    .swiper-scrollbar{
+        bottom: 15px;
+        left: 60px;
+        right: 60px;
+        width: auto;
+        background-color: rgba($color: #ffffff, $alpha: 0.15);
+        .swiper-scrollbar-drag{
+            background-color: rgba($color: #ffffff, $alpha: 1);
+        }
+    }
+
+    .nav-box{
+        position: relative;
+        margin-top: 40px;
+
+        .swiper-button-prev:hover{
+            color: var(--theme-color1);
+            background-color: rgba($color: #ffffff, $alpha: 1);
+        }
+
+        .swiper-button-next:hover{
+            color: var(--theme-color1);
+            background-color: rgba($color: #ffffff, $alpha: 1);
+        }
+
+        .swiper-button-prev{
+            position: relative;
+            width: 36px;
+            height: 36px;
+            @include transition(all 300ms ease);
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            color: var(--theme-color-white);
+            background-color: rgba($color: #ffffff, $alpha: 0.15);
+            &:after{
+                display: none;
+            }
+        }
+        .swiper-button-next{
+            position: absolute;
+            right: 0px;
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+            line-height: 36px;
+            text-align: center;
+            border-radius: 50px;
+            display: inline-block;
+            @include transition(all 300ms ease);
+            color: var(--theme-color-white);
+            background-color: rgba($color: #ffffff, $alpha: 0.15);
+            &:after{
+                display: none;
+            }
+        }
+    }
+
+
+}
+
+.review-block{
+    position: relative;
+    .inner-box{
+        position: relative;
+        &:hover{
+            .image{
+                span{
+                    transform: rotateY(360deg);
+                    color: var(--theme-color1);
+                    background-color: var(--theme-color-white); 
+                }
+                img{
+                    transform: scale(1.02,1.02);
+                }
+            }
+        }
+        .image{
+            position: relative;
+            margin-left: 15px;
+            padding-top: 15px;
+            display: inline-block;
+            span{
+                position: absolute;
+                left: -10px;
+                top: 0px;
+                z-index: 1;
+                width: 50px;
+                height: 50px;
+                font-size: 18px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50px;
+                color: var(--theme-color1);
+                background-color: #f4b400;
+                @include transition(all 500ms ease);
+            }
+            img{
+                position: relative;
+                overflow: hidden;
+                border-radius: 300px;
+                outline-offset: 12px;
+                display: inline-block;
+                @include transition(all 500ms ease);
+                outline: 1px solid var(--theme-color-white);
+            }
+        }
+        .title{
+            position: relative;
+            margin-top: 70px;
+            font-size: 24px;
+            color: var(--theme-color-white);
+            @include media-breakpoint-down(lg){
+                margin-top: 40px;
+            }
+        }
+        .text{
+            position: relative;
+            font-size: 16px;
+            margin-top: 20px;
+            line-height: 28px;
+            color: var(--theme-color-white);
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Market Two
+====================================================================
+
+***/
+
+.market-two {
+    position: relative;
+    padding: 110px 0px 110px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    .auto-container{
+        position:relative;
+        .inner-container{
+            position:relative;
+
+            .options-text{
+                position:absolute;
+                left:0px;
+                bottom:0px;
+                z-index:1;
+                max-width: 265px;
+
+                .lower-text{
+                    margin-bottom: 25px;
+                }
+
+                @include media-breakpoint-down(lg){
+                    position: relative;
+                    max-width: 100%;
+                    margin-bottom: 40px;
+                }
+                
+            }
+
+        }
+    }
+
+    .tabs-content{
+      position: relative;
+      padding-left: 350px;
+
+      @include media-breakpoint-down(lg){
+          padding-left: 0px;
+      }
+
+      .content{
+        position:relative;
+
+        .column{
+            position: relative;
+            &:first-child{
+                .inner-column{
+                    padding-left: 80px;
+                    border-left: 1px solid rgba($color: #000000, $alpha: 0.07);
+                    @include media-breakpoint-down(xl){
+                        padding-left: 30px;
+                    }
+                    @include media-breakpoint-down(lg){
+                        padding: 0px;
+                        border: none;
+                    }
+                }
+            }
+            &:nth-child(2){
+                .inner-column{
+                    padding-left: 65px;
+                    @include media-breakpoint-down(xl){
+                        padding-left: 0px;
+                    }
+                }
+            }
+        }
+
+        .bold-text{
+            font-size: 22px;
+            line-height: 32px;
+            font-weight: 500;
+            max-width: 300px;
+            margin-bottom: 35px;
+            color:var(--theme-color1);
+            @include media-breakpoint-down(md){
+                max-width: 100%;
+            }
+        }
+        .text{
+            max-width: 330px;
+            margin-bottom: 45px;
+            @include media-breakpoint-down(md){
+                max-width: 100%;
+            }
+        }
+        .image{
+            position: relative;
+            @include media-breakpoint-down(md){
+                margin-bottom:30px;
+            }
+            img{
+                position:relative;
+            }
+            .play{
+                position: absolute;
+                left:50%;
+                top:50%;
+                transform:translateX(-50%) translateY(-50%);
+                align-items: center;
+                color: var(--theme-color-white);
+                .icon{
+                    position: relative;
+                    width: 45px;
+                    height: 45px;
+                    font-size: 14px;
+                    margin-right: 10px;
+                    border-radius: 50px;
+                    text-align: center;
+                    line-height: 45px;
+                    display: inline-block;
+                    color: var(--theme-color1);
+                    background-color: var(--theme-color3);
+                    @include media-breakpoint-down(xl){
+                        margin-right: 5px;
+                    }
+                }
+                span{
+                    font-size: 16px;
+                    border-bottom: 1px solid var(--theme-color-white);
+                    @include media-breakpoint-down(xl){
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+      }
+    }
+
+  // Tab Btns
+  .tab-btns{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 10;
+    max-width: 370px;
+    width: 100%;
+    @include media-breakpoint-down(xl){
+        top: 0px;
+    }
+    @include media-breakpoint-down(lg){
+        position: relative;
+        margin-bottom:50px;
+        max-width:100%;
+    }
+    @include media-breakpoint-down(md){
+        
+    }
+    li{
+      position: relative;
+      color:#A4A4A4;
+      font-size:20px;
+      display: block;
+      line-height: 30px;
+      max-width: 260px;
+      font-weight: 400;
+      margin-bottom:25px;
+      padding:0px 0px 0px 55px;
+      @include transition(all 500ms ease);
+      
+      span{
+        position: absolute;
+        left:0px;
+        top: 5px;
+        width: 17px;
+        height: 17px;
+        border:1px solid var(--text-color);
+        &:before{
+            position:absolute;
+            content:'';
+            left: 6px;
+            top: 6px;
+            width: 17px;
+            height: 17px;
+            background-color: var(--text-color);
+        }
+        @include media-breakpoint-down(sm){
+            
+        }
+      }
+      i{
+        position: absolute;
+        right:0px;
+        top: 18px;
+        @include transition(all 500ms ease);
+      }
+      &.active-btn{
+        color: var(--theme-color1);
+      }
+      &.active-btn span{
+        border-color: var(--theme-color2);
+        &::before{
+            background-color: var(--theme-color2);
+        }
+      }
+      &:hover{
+        color: var(--theme-color1);
+        border-color: var(--theme-color1);
+      }
+      &:hover span{
+        border-color: var(--theme-color2);
+        &::before{
+            background-color: var(--theme-color2);
+        }
+      }
+    }
+
+  }
+
+  .tab-inner-content{
+      position: relative;
+      padding:35px 0px 0px 40px;
+      @include media-breakpoint-down(xxl){
+          padding:0px 0px;
+      }
+      @include media-breakpoint-down(md){
+          padding-top: 35px;
+      }
+    }
+
+}
+
+/*** 
+
+====================================================================
+    Market Three
+====================================================================
+
+***/
+
+.market-three {
+    position: relative;
+    margin-top: -150px;
+    z-index: 1;
+    padding: 0px 0px 0px;
+
+    @include media-breakpoint-down(lg){
+        margin-top:0px;
+        padding-top: 110px;
+    }
+
+    // Sec Title
+    .sec-title{
+        margin-top: 200px;
+        margin-bottom: 25px;
+        .text{
+            max-width: 430px;
+            @include media-breakpoint-down(lg){
+                max-width: 100%;
+            }
+        }
+        @include media-breakpoint-down(lg){
+            margin-top: 0px;
+        }
+    }
+
+    // Market Three List
+    .market-three_list{
+        position: relative;
+        margin-bottom: 30px;
+        li{
+            position: relative;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color:var(--text-color);
+            i{
+                position: relative;
+                margin-right: 10px;
+                color:var(--theme-color1);
+            }
+            &:last-child{
+                margin-bottom: 0px;
+            }
+        }
+    }
+
+    // Image
+    .image{
+        position: relative;
+        @include media-breakpoint-down(lg){
+            margin-top: 35px;
+        }
+        img{
+            max-width: inherit;
+            @include media-breakpoint-down(lg){
+                max-width: 100%;
+            }
+        }
+    }
+
+    .content{
+        position: absolute;
+        left: -70px;
+        bottom: 0px;
+        max-width: 370px;
+        width: 100%;
+        padding: 35px 35px;
+        background-color: var(--theme-color3);
+        @include media-breakpoint-down(xl){
+            left: 0px;
+        }
+        @include media-breakpoint-down(sm){
+            position: relative;
+            max-width: 100%;
+        }
+        .logo{
+            position: relative;
+            padding-bottom: 35px;
+            margin-bottom: 35px;
+            border-bottom: 1px solid rgba($color: #000000, $alpha: 0.08);
+        }
+        .clients{
+            position: relative;
+            font-size:22px;
+            font-weight: 500;
+            color: var(--theme-color1);
+        }
+
+        .authors{
+            position: relative;
+            margin-top: 15px;
+            li{
+                position: relative;
+                width: 40px;
+                height: 40px;
+                margin-left: -18px;
+                border-radius: 50px;
+                display: inline-block;
+                border: 2px solid var(--theme-color-white);
+                img{
+                    width: 100%;
+                }
+                &:nth-child(1){
+                    margin-left: 0px;
+                }
+            }
+        }
+
+    }
+
+}
+
+/*** 
+
+====================================================================
+    FullWidth Image
+====================================================================
+
+***/
+
+.fullwidth-image{
+    position:relative;
+    overflow: hidden;
+    .image{
+        position: relative;
+        img{
+            position: relative;
+            width: 100%;
+            display: block;
+            @include transition(all 500ms ease);
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+        }
+    }
+}

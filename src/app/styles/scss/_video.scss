@@ -1,0 +1,250 @@
+/*** 
+
+====================================================================
+    Video Section
+====================================================================
+
+***/
+
+.video-section {
+    position: relative;
+    text-align: center;
+    padding: 220px 0px 220px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    @include media-breakpoint-down(md){
+        padding: 150px 0px 150px;
+    }
+
+    &:before{
+        @include overlay;
+        content: "";
+        z-index: 1;
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--theme-color1));
+    }
+
+    .big-title{
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        z-index: 2;
+        font-size: 200px;
+        font-weight: 600;
+        line-height: 1em;
+        text-transform: capitalize;
+
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: rgba(255, 255, 255, 0.20);
+
+        @include media-breakpoint-down(xxl){
+            font-size: 120px;
+        }
+
+        @include media-breakpoint-down(lg){
+            font-size: 80px;
+        }
+
+        @include media-breakpoint-down(sm){
+            font-size: 50px;
+        }
+
+    }
+
+    .play{
+        position: relative;
+        z-index: 2;
+        color: var(--theme-color-white);
+        .icon{
+            position: relative;
+            width: 120px;
+            height: 120px;
+            font-size: 28px;
+            border-radius: 150px;
+            text-align: center;
+            line-height: 118px;
+            display: inline-block;
+            backdrop-filter: blur(20px);
+            color: var(--theme-color-white);
+            background-color:rgba($color: #ffffff, $alpha: 0.20);
+            border: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+        }
+    }
+    .title{
+        z-index: 2;
+        margin-top: 30px;
+        color: var(--theme-color-white);
+        @include media-breakpoint-down(md){
+            font-size: 36px;
+            line-height: 46px;
+            br{
+                display: none;
+            }
+        }
+    }
+
+}
+
+@-webkit-keyframes modal-video {
+	from {
+	opacity: 0;
+	}
+	to {
+	opacity: 1;
+	}
+}
+@keyframes modal-video {
+	from {
+	opacity: 0;
+	}
+	to {
+	opacity: 1;
+	}
+}
+@-webkit-keyframes modal-video-inner {
+	from {
+	-webkit-transform: translate(0, 100px);
+	transform: translate(0, 100px);
+	}
+	to {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	}
+}
+@keyframes modal-video-inner {
+	from {
+	-webkit-transform: translate(0, 100px);
+	transform: translate(0, 100px);
+	}
+	to {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	}
+}
+.modal-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1000000;
+	cursor: pointer;
+	opacity: 1;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-name: modal-video;
+	animation-name: modal-video;
+	-webkit-transition: opacity 0.3s ease-out;
+	transition: opacity 0.3s ease-out;
+}
+.modal-video-effect-exit {
+	opacity: 0;
+}
+.modal-video-effect-exit .modal-video-movie-wrap {
+	-webkit-transform: translate(0, 100px);
+	transform: translate(0, 100px);
+}
+.modal-video-body {
+	max-width: 960px;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.modal-video-inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+@media (orientation: landscape) {
+	.modal-video-inner {
+	padding: 10px 60px;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+}
+.modal-video-movie-wrap {
+	width: 100%;
+	height: 0;
+	position: relative;
+	padding-bottom: 56.25%;
+	background-color: #333;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	-webkit-animation-duration: 0.3s;
+	animation-duration: 0.3s;
+	-webkit-animation-name: modal-video-inner;
+	animation-name: modal-video-inner;
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+	-webkit-transition: -webkit-transform 0.3s ease-out;
+	transition: -webkit-transform 0.3s ease-out;
+	transition: transform 0.3s ease-out;
+	transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+.modal-video-movie-wrap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.modal-video-close-btn {
+	position: absolute;
+	z-index: 2;
+	top: -45px;
+	right: 0px;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	overflow: hidden;
+	border: none;
+	background: transparent;
+}
+@media (orientation: landscape) {
+	.modal-video-close-btn {
+	top: 0;
+	right: -45px;
+	}
+}
+.modal-video-close-btn:before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.modal-video-close-btn:after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.modal-video-close-btn:before, .modal-video-close-btn:after {
+	content: "";
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	top: 50%;
+	left: 0;
+	margin-top: -1px;
+	background: #fff;
+	border-radius: 5px;
+	margin-top: -6px;
+}

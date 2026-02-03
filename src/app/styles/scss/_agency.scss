@@ -1,0 +1,174 @@
+/*** 
+
+====================================================================
+    Agency Section
+====================================================================
+
+***/
+
+.agency-one {
+    position: relative;
+    margin: 0px 30px;
+
+    @include media-breakpoint-down(xxxl){
+        margin:0px 0px;
+    }
+
+    .outer-container{
+        position: relative;
+        max-width:1890px;
+        margin: 0 auto;
+    }
+    .image-expand{
+        position: relative;
+        overflow: hidden;
+        border-radius:25px 25px 0px 0px;
+        img{
+            position: relative;
+            width:100%;
+        }
+    }
+
+    .expand-section {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .lower-section{
+        position: relative;
+        overflow:hidden;
+        border-radius: 0px 0px 25px 25px;
+        padding:0px 40px 0px 130px;
+        background-size: cover;
+        background-color: var(--theme-color1);
+
+        @include media-breakpoint-down(xxl){
+            .sec-title{
+                h2{
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+            }
+        }
+
+        @include media-breakpoint-down(xxxl){
+            padding:0px 20px 0px 20px;
+        }
+
+        @include media-breakpoint-down(lg){
+            padding-bottom: 60px;
+        }
+
+        .title-box{
+            padding:90px 0px;
+        }
+
+        .sec-title{
+            padding-right: 0px;
+            .text{
+                max-width: 390px;
+                margin-top: 40px;
+                @include media-breakpoint-down(xxl){
+                    max-width: 100%;
+                }
+            }
+        }
+
+        .column{
+            .inner-column{
+                position:relative;
+                padding:95px 60px 30px;
+                border-left: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+
+                @include media-breakpoint-down(xxl){
+                    padding: 60px 30px 30px;
+                }
+
+                @include media-breakpoint-down(lg){
+                    border:none;
+                    padding:0px 0px;
+                }
+
+            }
+        }
+
+    }
+
+    // Agency Box
+    .agency-box{
+        position: relative;
+        font-size:16px;
+        padding-left: 120px;
+        padding-top: 10px;
+        min-height: 85px;
+        color:var(--theme-color-white);
+        @include media-breakpoint-down(sm){
+            padding: 0px 0px;
+        }
+        .image{
+            position: absolute;
+            left:0px;
+            top: 0px;
+            width: 85px;
+            height: 85px;
+            overflow:hidden;
+            border-radius: 12px;
+            @include media-breakpoint-down(sm){
+                position: relative;
+                margin-bottom: 20px;
+            }
+        }
+        h4{
+            margin-bottom: 8px;
+            color:var(--theme-color-white);
+        }
+    }
+
+    .agency-block_one{
+        position: relative;
+        margin-bottom: 65px;
+
+        @include media-breakpoint-down(lg){
+            margin-bottom: 30px;
+        }
+
+        .inner{
+            position: relative;
+            &:hover{
+                .icon{
+                    color:var(--theme-color2);
+                    background-color: var(--theme-color-white);
+                    -webkit-transform: scale(-1) rotate(180deg);
+                    -moz-transform: scale(-1) rotate(180deg);
+                    -ms-transform: scale(-1) rotate(180deg);
+                    -o-transform: scale(-1) rotate(180deg);
+                    transform: scale(-1) rotate(180deg);
+                }
+            }
+            .icon{
+                position:relative;
+                width:75px;
+                height:75px;
+                font-size: 40px;
+                line-height:75px;
+                text-align:center;
+                border-radius: 10px;
+                display: inline-block;
+                color:var(--theme-color-white);
+                font-family: "flaticon-agencyo";
+                @include transition(all 500ms ease);
+                background-color: var(--theme-color2);
+            }
+            .title{
+                margin-top: 30px;
+                color:var(--theme-color-white);
+            }
+            .text{
+                opacity: 0.65;
+                margin-top: 15px;
+                color:var(--theme-color-white);
+            }
+        }
+    }
+
+}

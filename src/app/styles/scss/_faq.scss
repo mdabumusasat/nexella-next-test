@@ -1,0 +1,493 @@
+/*** 
+
+====================================================================
+    Faq Section
+====================================================================
+
+***/
+
+.faq-section{
+    position: relative;
+    padding:105px 0px 105px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    @include media-breakpoint-down(xl){
+        background-image: none !important;
+    }
+    .inner-container{
+        position: relative;
+        max-width: 600px;
+        @include media-breakpoint-down(xl){
+            max-width: 100%;
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Faq Two
+====================================================================
+
+***/
+
+.faq-two{
+    position: relative;
+    padding:0px 0px 110px;
+}
+
+/*** 
+
+====================================================================
+    Faq Three
+====================================================================
+
+***/
+
+.faq-three{
+    position: relative;
+    background-color: var(--theme-color1);
+    .image{
+        position: relative;
+        img{
+            position: relative;
+            width:100%;
+            display:block;
+        }
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0px;
+            bottom: 0px;
+            content: "";
+            z-index: 1;
+            background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--theme-color1));
+        }
+    }
+
+    // Lower Box
+    .lower-box{
+        position: relative;
+        .auto-container{
+            max-width:1730px;
+        }
+
+        // Author Box
+        .author-box{
+            position: relative;
+            padding-left: 150px;
+            margin-top: 110px;
+            margin-bottom: 25px;
+            @include media-breakpoint-down(xl){
+                margin-top: 60px;
+            }
+            @include media-breakpoint-down(sm){
+                padding-left: 0px;
+            }
+            .author-image{
+                position:absolute;
+                left:0px;
+                top:0px;
+                width:100px;
+                height:100px;
+                overflow:hidden;
+                border-radius:100px;
+                @include media-breakpoint-down(sm){
+                    position: relative;
+                    margin-bottom: 20px;
+                }
+            }
+            .author-title{
+                font-size:40px;
+                line-height: 50px;
+                margin-bottom: 25px;
+                color: var(--theme-color-white);
+                @include media-breakpoint-down(xxl){
+                    font-size: 34px;
+                    line-height: 44px;
+                }
+                @include media-breakpoint-down(sm){
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+            }
+        }
+
+    }
+
+    // Accordion Outer
+    .accordion-outer{
+        position:relative;
+        z-index:1;
+        margin-left: -180px;
+        padding: 66px 70px;
+        margin-top: -280px;
+        margin-right: 181px;
+        background-color:#f1f2eb;
+
+        .sec-title{
+            margin-bottom: 35px;
+        }
+
+        @include media-breakpoint-down(xxxl){
+            margin-left: -130px;
+            margin-right: 140px;
+        }
+
+        @include media-breakpoint-down(xxl){
+            padding: 40px 40px;
+        }
+        @include media-breakpoint-down(xl){
+            padding: 35px 35px;
+            margin-right: 0px;
+        }
+        @include media-breakpoint-down(xxl){
+            margin-top:-280px;
+            margin-left: -80px;
+            margin-right: 50px;
+        }
+        @include media-breakpoint-down(xl){
+            margin-top: 40px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 110px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 20px 20px;
+        }
+        &:before{
+            position:absolute;
+            content:'';
+            left:100%;
+            top: 0px;
+            height:100%;
+            width:315px;
+            background: url(../images/resource/faq-2.jpg) no-repeat;
+            background-size: cover;
+            @include media-breakpoint-down(xl){
+                display:none;
+            }
+        }
+    }
+
+}
+
+/*** 
+
+====================================================================
+    Faq Four
+====================================================================
+
+***/
+
+.faq-four{
+    position: relative;
+    padding: 120px 0px 120px;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.07);
+
+    @include media-breakpoint-down(xl){
+        padding-bottom: 110px;
+    }
+
+    .accordion-box_four{
+        margin-top: -190px;
+        @include media-breakpoint-down(xl){
+            margin-top: 30px;
+        }
+    }
+
+    .images-outer{
+        position: relative;
+        margin-left:-400px;
+        margin-right: 100px;
+        margin-top: 30px;
+        @include media-breakpoint-down(xxl){
+            margin-right: 0px;
+        }
+        @include media-breakpoint-down(xl){
+            margin-top: 0px;
+            margin-left: 0px;
+        }
+        .image{
+            display:none;
+            img{
+                position: relative;
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+    Faq Five
+====================================================================
+
+***/
+
+.faq-five{
+    position: relative;
+    padding: 20px 0px 0px;
+    .auto-container{
+        max-width: 1810px;
+    }
+
+    .circle-layer{
+        @include absolute;
+        width: 303px;
+        height: 323px;
+        @include media-breakpoint-down(xl){
+            display: none;
+        }
+    }
+
+    .inner-container{
+        position: relative;
+        background-size: cover;
+    }
+
+    .title-outer{
+        position: relative;
+        padding: 180px 100px 60px 120px;
+
+        @include media-breakpoint-down(xxxl){
+            padding: 120px 40px 60px 60px;
+        }
+
+        @include media-breakpoint-down(xl){
+            padding: 80px 30px 60px 30px;
+        }
+
+        @include media-breakpoint-down(md){
+            padding: 50px 15px 50px 15px;
+        }
+
+        .buttons-box{
+            position: relative;
+            display: flex;
+            gap: 35px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        
+
+    }
+
+    .accordion-outer{
+        position: relative;
+        padding: 80px 90px;
+        backdrop-filter: blur(25px);
+        background-color: rgba($color: #0a192f, $alpha: 0.60);
+        @include media-breakpoint-down(xxxl){
+            padding: 70px 40px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 50px 20px;
+        }
+    }
+
+}
+
+/*** 
+
+====================================================================
+    Faq Six
+====================================================================
+
+***/
+
+.faq-six{
+    position: relative;
+    padding: 110px 0px 150px;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    .column{
+        position: relative;
+        &:first-child{
+            @include media-breakpoint-down(lg){
+                order:2;
+                margin-top: 40px;
+            }
+        }
+    }
+
+    .image{
+        position: relative;
+        display: inline-block;
+        @include media-breakpoint-down(xl){
+            display: block;
+        }
+        img{
+            border-radius: 5px;
+            overflow: hidden;
+            @include media-breakpoint-down(xl){
+                width: 100%;
+            }
+        }
+    }
+
+    .faq-six-content{
+        position: absolute;
+        right: -70px;
+        bottom: -40px;
+        max-width: 260px;
+        border-radius: 10px;
+        padding: 30px 30px;
+        background: linear-gradient(135deg, #3a00ff, #ff00dc);
+        .icon{
+            position: relative;
+            img{
+                width: auto;
+            }
+        }
+        .title{
+            margin-top:30px;
+            font-weight: 500;
+            color: var(--theme-color-white);
+        }
+        .text{
+            margin-top:15px;
+            margin-bottom:15px;
+            color: var(--theme-color-white);
+        }
+        .arrow{
+            position:relative;
+            text-align: right;
+            font-size: 20px;
+            display: block;
+            color: var(--theme-color-white);
+            &:before{
+                display: inline-block;
+                transform: rotate(-45deg);
+            }
+            &:after{
+                position: absolute;
+                content: '';
+                left: 0px;
+                top: 11px;
+                opacity: 0.20;
+                right : 30px;
+                height: 1px;
+                background-color: var(--theme-color-white);
+            }
+        }
+
+        @include media-breakpoint-down(xl){
+            right: 10px;
+            bottom: 10px;
+        }
+
+    }
+
+}
+
+/*** 
+
+====================================================================
+    Faq Seven
+====================================================================
+
+***/
+
+.faq-seven{
+    position: relative;
+    padding: 110px 0px 150px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    .sec-title{
+        margin-bottom: 90px;
+    }
+
+    .question-box{
+        position:relative;
+        max-width: 370px;
+        width: 100%;
+        padding: 40px 45px;
+        background-size: cover;
+        &:before{
+            @include overlay;
+            content: "";
+            background-image: linear-gradient(to top, rgba(255, 255, 255, 0), var(--theme-color1));
+        }
+        .title{
+            position:relative;
+            font-size: 28px;
+            line-height: 38px;
+            color: var(--theme-color-white);
+        }
+        .text{
+            position:relative;
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+            color: var(--theme-color-white);
+        }
+
+        @include media-breakpoint-down(xl){
+            margin-bottom: 30px;
+        }
+
+    }
+
+}
+
+/*** 
+
+====================================================================
+    Faq Eight
+====================================================================
+
+***/
+
+.faq-eight{
+    position: relative;
+    padding: 110px 0px 150px;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+
+    @include media-breakpoint-down(xl){
+        padding-bottom: 100px;
+    }
+
+    .cloud{
+        @include overlay;
+        content: '';
+        top: -180px;
+        background-position: center top;
+        background-repeat: no-repeat;
+    }
+
+    .inner-container{
+        position: relative;
+        max-width: 960px;
+        margin: 0 auto;
+    }
+
+    .accordion-box_four{
+        .block{
+            margin-bottom: 12px;
+            border-radius: 10px;
+            padding: 22px 30px 22px;
+            background-color: var(--theme-color-white);
+            border: 1px solid rgba($color: #000000, $alpha: 0.07);
+
+            .acc-content{
+                .content{
+                    .text{
+                        max-width: 100%;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

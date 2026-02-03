@@ -1,0 +1,241 @@
+/*** 
+
+====================================================================
+  Success Section
+====================================================================
+
+***/
+
+.success-section{
+    position: relative;
+    padding: 100px 0px 70px;
+
+    .vector{
+      position: absolute;
+      left: -80px;
+      bottom: -150px;
+      width: 357px;
+      height: 357px;
+      background-repeat: no-repeat;
+    }
+
+    .column{
+      position: relative;
+       
+       &:nth-child(2n + 0){
+        .success-block_one{
+          .inner{
+            .image{
+              order:1;
+              @include media-breakpoint-down(md){
+                order: 2;
+              }
+            }
+            .content{
+              order:2;
+              margin-top: 30px;
+              margin-bottom: 0px;
+              @include media-breakpoint-down(md){
+                order: 1;
+                margin-top: 0px;
+                margin-bottom: 30px;
+              }
+            }
+          }
+        }
+       }
+    }
+
+    .success-block_one{
+      position: relative;
+      margin-bottom: 30px;
+
+      .inner{
+        position: relative;
+          display: flex;
+          flex-direction: column;
+        &:hover {
+          .image{
+            img{
+              opacity: 0.70;
+              transform: scale(1.05,1.05) rotate(2deg);
+            }
+          }
+          .content{
+            .number{
+              transform: rotateY(360deg);
+              color: var(--theme-color-white);
+              border-color: var(--theme-color3);
+              background-color: var(--theme-color3);
+            }
+          }
+        }
+        .image{
+          position: relative;
+          overflow: hidden;
+          background-color: var(--theme-color3);
+          img{
+            position: relative;
+            width: 100%;
+            @include transition(all 500ms ease);
+          }
+        }
+
+        .content{
+          position: relative;
+          padding:35px 35px;
+          margin-bottom: 30px;
+          background-color: #f5f5f5;
+          @include media-breakpoint-down(sm){
+            padding:25px 25px;
+          }
+          .number{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            line-height: 48px;
+            border-radius: 50px;
+            text-align: center;
+            display: inline-block;
+            @include transition(all 500ms ease);
+            color: var(--theme-color6);
+            font-weight:var(--h4-font-weight);
+            background-color: var(--theme-color-white);
+            border: 1px solid rgba($color: #000000, $alpha: 0.08);
+          }
+          .title{
+            position: relative;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight:var(--h4-font-weight);
+            a{
+              color: var(--theme-color1);
+              &:hover{
+                color: var(--theme-color6);
+              }
+            }
+          }
+          .text{
+            position: relative;
+            font-size: 16px;
+            line-height: 28px;
+            color: var(--text-color);
+          }
+        }
+
+      }
+    }
+
+}
+
+/*** 
+
+====================================================================
+  Success Section Two
+====================================================================
+
+***/
+
+.success-section-two{
+    position: relative;
+    .auto-container{
+        max-width: 1810px;
+      .inner-container{
+        position: relative;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-color: var(--theme-color1);
+        .image{
+          position: relative;
+          img{
+            position: relative;
+            width: 100%;
+            display: block;
+          }
+          &:before{
+              @include overlay;
+              content: "";
+              z-index: 1;
+              background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--theme-color1));
+          }
+        }
+
+        .content{
+          position: relative;
+          padding:60px 200px 90px;
+
+          @include media-breakpoint-down(xxxl){
+              padding:60px 80px 80px;
+          }
+
+          @include media-breakpoint-down(xxl){
+              padding:60px 40px 80px;
+          }
+
+          @include media-breakpoint-down(sm){
+              padding: 30px 20px 30px;
+          }
+
+          .title{
+              padding-bottom: 30px;
+              color: var(--theme-color-white);
+              border-bottom:1px solid rgba($color: #ffffff, $alpha: 0.08);
+              @include media-breakpoint-down(sm){
+                  font-size: 34px;
+                  line-height: 44px;
+              }
+          }
+          .text{
+            margin-top: 30px;
+            margin-bottom: 35px;
+            font-size: var(--h5-font-size);
+            color: var(--theme-color-white);
+          }
+
+        }
+
+        .counter-outer{
+          position: relative;
+          padding-left:110px;
+          margin-left: 120px;
+          border-left: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+
+          @include media-breakpoint-down(xxl){
+              margin-left: 0px;
+              padding-left: 60px;
+          }
+
+          @include media-breakpoint-down(xl){
+            border: none;
+            margin-top: 80px;
+            padding-left: 0px;
+          }
+
+          .success-count{
+              position: relative;
+              font-size: 100px;
+              font-weight: 400;
+              margin-bottom: 90px;
+              color:var(--theme-color-white);
+              .text{
+                  display: block;
+                  margin-top: 50px;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 20px;
+                  color:var(--theme-color-white);
+              }
+              &:last-child{
+                margin-bottom:0px;
+              }
+              @include media-breakpoint-down(sm){
+                  font-size: 70px;
+              }
+          }
+
+        }
+
+      }
+    }
+}
+

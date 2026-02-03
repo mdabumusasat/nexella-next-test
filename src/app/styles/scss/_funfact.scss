@@ -1,0 +1,341 @@
+/*** 
+
+====================================================================
+  Funfact Section
+====================================================================
+
+***/
+
+.funfact-section {
+    position: relative;
+    padding: 0px 0px 80px;
+
+    .column{
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .title-box{
+      position: relative;
+      margin-bottom: 60px;
+      @include media-breakpoint-down(sm){
+        font-size: 32px;
+        line-height: 42px;
+      }
+    }
+
+    .funfact-options{
+      position: relative;
+      .circle{
+        position: relative;
+        z-index: 2;
+        span{
+            position: relative;
+            font-size: 22px;
+            display: inline-block;
+        }
+        &:before{
+            @include absolute;
+            content: '';
+            width: 193px;
+            height: 193px;
+            background: url(../images/icons/arrow.png) no-repeat;
+        }
+      }
+      .author{
+        position: relative;
+        margin-left: -40px;
+        @include media-breakpoint-down(sm){
+          margin-left: 0px;
+        }
+      }
+    }
+
+    .funfact-counter_box{
+      position: relative;
+      border: 1px solid rgba($color: #000000, $alpha: 0.10);
+      .column{
+        margin-bottom: 0px;
+        &:last-child .funfact-counts{
+          border:none;
+          @include media-breakpoint-down(sm){
+            border-top: 1px solid rgba($color: #000000, $alpha: 0.10) !important;
+          }
+        }
+      }
+      .funfact-counts{
+        position: relative;
+        padding: 40px 50px;
+        border-right: 1px solid rgba($color: #000000, $alpha: 0.10);
+        @include media-breakpoint-down(sm){
+          border-right: 0px;
+          padding: 30px 30px;
+        }
+        &:hover .icon{
+          transform: rotateY(180deg);
+        }
+        .count-box{
+          position: relative;
+          font-size:75px;
+          font-weight: 500;
+          line-height: 1em;
+          color:var(--theme-color1);
+        }
+        .designation{
+          position: relative;
+          font-size:20px;
+          font-weight: 400;
+          line-height: 1em;
+          margin-top: 15px;
+          color:var(--text-color);
+        }
+        .icon{
+          position: relative;
+          font-size:60px;
+          font-weight: 400;
+          line-height: 1em;
+          margin-top: 60px;
+          margin-bottom: 60px;
+          display: inline-block;
+          color:var(--theme-color3);
+          font-family: "flaticon-agencyo";
+          @include transition(all 500ms ease);
+        }
+        .text{
+          font-size: 16px;
+          line-height: 28px;
+          color:var(--text-color);
+        }
+      }
+    }
+
+}
+
+/*** 
+
+====================================================================
+  Funfact Section Two
+====================================================================
+
+***/
+
+.funfact-section-two{
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+
+  .column {
+      position: relative;
+      &:first-child{
+        .counter-block{
+          .inner{
+            padding-left: 0px;
+          }
+        }
+      }
+
+      &:last-child{
+        .inner {
+          &:before{
+            display: none;
+          }
+        }
+      }
+
+    }
+
+
+    @include media-breakpoint-down(xxl){
+
+      .column{
+        &:nth-child(4){
+          .counter-block{
+            .inner{
+              border-right: 1px solid  rgba($color: #000000, $alpha: 0.10);
+              @include media-breakpoint-down(md){
+                border:none;
+              }
+            }
+          }
+        }
+      }
+
+      .column{
+        &:nth-child(1),
+        &:nth-child(2){
+          .counter-block{
+            .inner{
+              border-bottom: 1px solid  rgba($color: #000000, $alpha: 0.10);
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-down(md){
+
+      .column{
+        &:nth-child(3){
+          .counter-block{
+            .inner{
+                border-bottom: 1px solid  rgba($color: #000000, $alpha: 0.10);
+            }
+          }
+        }
+      }
+
+    }
+    
+    .auto-container{
+      max-width: 1950px;
+    }
+
+    .inner-container{
+      position: relative;
+    }
+
+    // Style Two
+    &.style-two{
+      border: none;
+
+      .column{
+        &:first-child{
+          .counter-block{
+            .inner{
+              
+              padding-left: 40px;
+              @include media-breakpoint-down(xxxl){
+                  // padding-left: 15px;
+              }
+              
+            }
+          }
+        }
+        .counter-block{
+          .inner{
+            padding-left: 40px;
+          }
+        }
+      }
+
+      .auto-container{
+        max-width: 1890px;
+        .inner-container{
+          border-radius: 15px;
+          border: 1px solid rgba($color: #000000, $alpha: 0.07);
+
+          @include media-breakpoint-down(xxl){
+              border-right: 0px;
+              border-radius: 0px;
+              @include media-breakpoint-down(md){
+                border-right: 1px solid rgba($color: #000000, $alpha: 0.07);
+              }
+          }
+
+          .counter-block{
+            .inner{
+              .icon-box{
+                .icon{
+                  color: var(--theme-color-white);
+                  background-color: var(--theme-color2);
+                }
+              }
+              .count-box{
+                color: var(--theme-color1);
+              }
+            }
+          }
+        }
+      }
+    }
+
+}
+
+.counter-block {
+  position: relative;
+  .inner { 
+    position: relative;
+    padding: 70px 60px 70px;
+
+    @include media-breakpoint-down(xxxxl){
+      padding: 50px 40px 50px;
+    }
+
+    @include media-breakpoint-down(xxxl){
+      padding: 70px 15px 70px;
+    }
+
+    @include media-breakpoint-down(md){
+      padding: 30px 0px;
+    }
+
+    @include media-breakpoint-down(sm){
+      padding: 30px 0px;
+    }
+    
+    .content{
+      position: relative;
+      padding-left: 110px;
+    }
+
+    &::before{
+      position: absolute;
+      content: '';
+      right: -1px;
+      top: 0px;
+      bottom: 0px;
+      width: 1px;
+      background-color: rgba($color: #000000, $alpha: 0.10);
+
+      @include media-breakpoint-down(md){
+          display:none;
+      }
+
+    }
+    &:hover {
+      .icon-box {
+        // transform: scaleX(-1);
+        .icon {
+          transform: rotateY(180deg);
+          color: var(--theme-color1);
+          background-color: var(--theme-color2);
+        }
+      }
+    }
+    .icon-box {
+      @include transition(all 300ms ease);
+      .icon {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 85px;
+        height: 85px;
+        font-size: 40px;
+        line-height: 85px;
+        text-align: center;
+        font-style: normal;
+        border-radius: 50px;
+        display: inline-block;
+        font-family: "flaticon-agencyo";
+        color: var(--theme-color-white);
+        @include transition(all 300ms ease);
+        background-color: var(--theme-color3);
+      }
+    }
+    .count-box {
+      position: relative;
+      font-size: 48px;
+      line-height: 55px;
+      font-weight: 500;
+      color: var(--theme-color3);
+      text-transform: uppercase;
+    }
+    .text {
+      position: relative;
+      line-height: 26px;
+      font-size: 16px;
+      max-width: 230px;
+      margin-top: 8px;
+      color: var(--text-color);
+    }
+  }
+}

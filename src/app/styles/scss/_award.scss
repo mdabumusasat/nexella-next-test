@@ -1,0 +1,57 @@
+/*** 
+
+====================================================================
+    Award Section
+====================================================================
+
+***/
+
+.award-section {
+    position: relative;
+    padding: 40px 0px 120px;
+
+    .sec-title_two{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 90px;
+        align-items: center;
+        justify-content: space-between;
+
+        .right-box{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+
+            .circle{
+                position: relative;
+                z-index: 1;
+                span{
+                    position: relative;
+                    font-size: 22px;
+                    display: inline-block;
+                }
+                &:before{
+                    @include absolute;
+                    content: '';
+                    width: 193px;
+                    height: 193px;
+                    background: url(../images/icons/arrow.png) no-repeat;
+                }
+            }
+
+            .author{
+                position: relative;
+                z-index: -1;
+                margin-left: -45px;
+                @include media-breakpoint-down(xl){
+                    margin-left: -85px;
+                }
+            }
+            @include media-breakpoint-down(xl){
+                margin-top: 40px;
+            }
+        }
+
+    }
+
+}

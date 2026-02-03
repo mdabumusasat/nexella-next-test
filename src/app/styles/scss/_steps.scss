@@ -1,0 +1,581 @@
+/*** 
+
+====================================================================
+  Step Section
+====================================================================
+
+***/
+
+.steps-one{
+    position: relative;
+    padding: 110px 0px 80px;
+    .steps-one_circle{
+      position: absolute;
+      left: -270px;
+      bottom: 0px;
+      width: 543px;
+      height: 543px;
+      background-repeat: no-repeat;
+    }
+}
+
+// Step Block One
+
+.step-block_one{
+  position: relative;
+  margin-bottom: 30px;
+  .inner{
+    position: relative;
+    text-align: center;
+    padding: 0px 30px 60px;
+    background-color: var(--theme-color-white);
+    &::before{
+      content: '';
+      @include overlay;
+      top: 30px;
+      border: 1px solid rgba($color: #000000, $alpha: 0.07);
+    }
+    &:hover{
+     .number{
+        transform: rotateY(360deg);
+        color: var(--theme-color-white);
+        background-color: var(--theme-color1);
+     }
+    }
+    &:hover{
+      .icon{
+        transform: rotateY(180deg);
+        color: var(--theme-color-white);
+        background-color: var(--theme-color1);
+      }
+    }
+  }
+  .number{
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto;
+    font-size: 16px;
+    @include transition(all 500ms ease);
+    line-height: 56px;
+    border-radius: 50px;
+    color: var(--theme-color1);
+    background-color: #e7e7e7;
+  }
+  .icon{
+    position: relative;
+    width: 98px;
+    height: 94px;
+    margin: 0 auto;
+    font-size: 54px;
+    margin-top: 45px;
+    line-height: 94px;
+    font-family: flaticon-agencyo;
+    @include transition(all 500ms ease);
+    color: var(--theme-color1);
+    background-color: #e7e7e7;
+  }
+  .title{
+    margin-top: 40px;
+    font-weight: var(--h4-font-weight);
+    a{
+      &:hover{
+        color: var(--theme-color4);
+      }
+    }
+  }
+  .text{
+    margin-top: 20px;
+    color: var(--text-color);
+  }
+}
+
+/*** 
+
+====================================================================
+  Step Section
+====================================================================
+
+***/
+
+.steps-two{
+    position: relative;
+    padding: 110px 0px 80px;
+
+    .image{
+      position: relative;
+      overflow: hidden;
+      img{
+        position: relative;
+        width: 100%;
+        display: block;
+
+        @include transition(all 500ms ease);
+        transform: scale(1.2);
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+      }
+    }
+
+    .column{
+      margin-bottom: 30px;
+      @include media-breakpoint-down(lg){
+        margin-bottom: 60px;
+      }
+    }
+
+}
+
+// Step Block Two
+
+.step-block_two{
+  position: relative;
+  &:last-child .inner{
+    padding-bottom: 0px;
+  }
+  .inner{
+    position: relative;
+    padding-top: 15px;
+    padding-left: 90px;
+    padding-bottom: 25px;
+    &::before{
+      position: absolute;
+      content: '';
+      left: 25px;
+      top:0px;
+      bottom: 0px;
+      width: 1px;
+      opacity:0.10;
+      background-color:var(--theme-color1);
+    }
+    &:hover .number{
+      color: var(--theme-color-white);
+      border-color: var(--theme-color3);
+      background-color: var(--theme-color3);
+    }
+    .number{
+      position: absolute;
+      left: 0px;
+      top: 15px;
+      width: 50px;
+      height: 50px;
+      font-size: 18px;
+      border-radius: 50px;
+      line-height: 48px;
+      text-align: center;
+      @include transition(all 500ms ease);
+      color: var(--theme-color1);
+      background-color: var(--theme-color-white);
+      border: 1px solid rgba($color: #000000, $alpha: 0.07);
+    }
+    .title{
+      position: relative;
+      margin-bottom: 15px;
+      color: var(--theme-color1);
+      text-transform: capitalize;
+    }
+    .text{
+      position: relative;
+      font-size: 16px;
+      line-height: 28px;
+      max-width: 340px;
+      color: var(--text-color);
+      text-transform: capitalize;
+      @include media-breakpoint-down(lg){
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/*** 
+
+====================================================================
+  Step Section Three
+====================================================================
+
+***/
+
+.workflow{
+    position: relative;
+
+    //Upper Box
+    .upper-box{
+      position: relative;
+      overflow: hidden;
+      .image{
+        position: relative;
+        img{
+          width: 100%;
+          display: block;
+          transition: all 500ms ease;
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+        }
+        &:before{
+          @include overlay;
+          opacity: 0.50;
+          content: '';
+          z-index: 1;
+          background-color: #223328;
+        }
+      }
+      
+      .overlay{
+        z-index: 2;
+        @include overlay;
+        padding: 200px 200px;
+        @include media-breakpoint-down(xxxl){
+            padding: 140px 200px;
+        }
+        @include media-breakpoint-down(xxl){
+            padding: 110px 60px;
+        }
+        @include media-breakpoint-down(lg){
+            position: relative;
+            padding: 60px 30px;
+            background-color: var(--theme-color1);
+            border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+        }
+        .sec-title{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .right-box{
+              max-width: 750px;
+              width: 100%;
+            }
+        }
+      }
+
+    }
+
+    .auto-container{
+      max-width: 1810px;
+    }
+
+}
+
+  //Steps Three
+  .steps-three{
+    position: relative;
+    background-color: var(--theme-color1);
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    overflow: hidden;
+
+    @include media-breakpoint-down(xl){
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    //Step Block Three
+    .step-block_three{
+        min-height: 517px;
+        margin-right: 5px;
+        margin-left: 5px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        will-change: flex;
+        &.active{
+          -webkit-box-flex: 1.8;
+          -ms-flex: 1.8;
+          flex: 1.8;
+          .content{
+            opacity: 1;
+          }
+        }
+        &:hover{
+          -webkit-box-flex: 1.8;
+          -ms-flex: 1.8;
+          flex: 1.8;
+          .content{
+            opacity: 1;
+            .step{
+              opacity: 1;
+              transform: translateY(0px);
+              -webkit-transition-delay: 150ms;
+              -moz-transition-delay: 150ms;
+              -ms-transition-delay: 150ms;
+              -o-transition-delay: 150ms;
+              transition-delay: 150ms;
+            }
+            .icon{
+              opacity: 1;
+              transform: translateY(0px);
+              -webkit-transition-delay: 300ms;
+              -moz-transition-delay: 300ms;
+              -ms-transition-delay: 300ms;
+              -o-transition-delay: 300ms;
+              transition-delay: 300ms;
+            }
+            .title{
+              opacity: 1;
+              transform: translateY(0px);
+              -webkit-transition-delay: 450ms;
+              -moz-transition-delay: 450ms;
+              -ms-transition-delay: 450ms;
+              -o-transition-delay: 450ms;
+              transition-delay: 450ms;
+            }
+            .text{
+              opacity: 1;
+              transform: translateY(0px);
+              -webkit-transition-delay: 600ms;
+              -moz-transition-delay: 600ms;
+              -ms-transition-delay: 600ms;
+              -o-transition-delay: 600ms;
+              transition-delay: 600ms;
+            }
+          }
+        }
+        @include media-breakpoint-down(xl){
+          width: 50%;
+          -webkit-box-flex: 0 !important;
+          -ms-flex: 0 0 50% !important;
+          flex: 0 0 50% !important;
+          padding: 0 15px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+        @include media-breakpoint-down(lg){
+            width: 100%;
+            -webkit-box-flex: 0 !important;
+            -ms-flex: 0 0 100% !important;
+            flex: 0 0 100% !important;
+        }
+        @include media-breakpoint-down(sm){
+            min-height: auto;
+        }
+    }
+
+  }
+
+// Step Block Three
+
+.step-block_three{
+  position: relative;
+  @include transition(all 500ms ease);
+  border-right: 1px solid rgba($color: #ffffff, $alpha: 0.10);
+  
+  @include media-breakpoint-down(xl){
+      border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.07);
+  }
+
+  &:hover{
+    .inner{
+      .number,
+      .icon,
+      .title{
+        opacity: 0;
+      }
+    }
+  }
+
+  &:last-child{
+    border-right: 0px;
+  }
+
+  .inner{
+    position: relative;
+    padding-top: 100px;
+    padding-left: 70px;
+    padding-bottom: 80px;
+    
+    @include media-breakpoint-down(xxl){
+        padding-left: 25px;
+    }
+
+    @include media-breakpoint-down(xl){
+      padding-top: 100px;
+      padding-left: 20px;
+      padding-bottom: 40px;
+    }
+
+    @include media-breakpoint-down(sm){
+      padding-top: 30px;
+      padding-left: 5px;
+      padding-bottom: 20px;
+    }
+
+    .number{
+      position: relative;
+      font-size: 16px;
+      padding: 8px 20px;
+      border-radius: 50px;
+      display: inline-block;
+      text-transform: capitalize;
+      color: var(--theme-color-white);
+      @include transition(all 500ms ease);
+      border: 1px solid rgba($color: #ffffff, $alpha: 0.07);
+    }
+    .icon{
+      position: relative;
+      display: block;
+      font-size: 64px;
+      line-height: 1em;
+      margin-top: 150px;
+      margin-bottom: 35px;
+      color: var(--theme-color-white);
+      font-family: "flaticon-agencyo";
+    }
+    .title{
+      position: relative;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+      color: var(--theme-color-white);
+      @include media-breakpoint-down(xl){
+        font-size: 24px;
+        line-height: 34px;
+        br{
+          display: none;
+        }
+      }
+    }
+  }
+
+  // Content
+  .content{
+    position:absolute;
+    left:49px;
+    top:100px;
+    z-index: 1;
+    bottom:80px;
+    right: 100px;
+    opacity: 0;
+    background-color: var(--theme-color1);
+    @include transition(all 500ms ease);
+    @include media-breakpoint-down(xxl){
+        left: 15px;
+        right: 20px;
+    }
+    @include media-breakpoint-down(lg){
+        left: 32px;
+    }
+    @include media-breakpoint-down(sm){
+        left: 15px;
+        top: 80px;
+    }
+    .step{
+        position: relative;
+        font-size: 16px;
+        opacity: 0;
+        font-weight: 500;
+        border-radius: 50px;
+        padding: 9px 22px 8px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: var(--theme-color1);
+        transform: translateY(35px);
+        background-color: var(--theme-color2);
+        @include transition(all 500ms ease);
+      }
+
+      .title{
+        opacity: 0;
+        font-size: 28px;
+        margin-top: 25px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        color: var(--theme-color-white);
+        transform: translateY(35px);
+        @include transition(all 500ms ease);
+        @include media-breakpoint-down(sm){
+          font-size:28px;
+          line-height: 38px;
+        }
+      }
+      .icon{
+        position: relative;
+        opacity: 0;
+        line-height: 1em;
+        font-size: 74px;
+        margin-top: 40px;
+        margin-bottom: 35px;
+        color: var(--theme-color2);
+        transform: translateY(35px);
+        font-family: "flaticon-agencyo";
+        @include transition(all 500ms ease);
+      }
+      .text{
+        opacity: 0;
+        font-size:16px;
+        line-height: 28px;
+        color: var(--theme-color-white);
+        transform: translateY(35px);
+        @include transition(all 500ms ease);
+        @include media-breakpoint-down(sm){
+            display: none;
+        }
+      }
+
+  }
+
+}
+
+/*** 
+
+====================================================================
+  Step Section Four
+====================================================================
+
+***/
+
+.steps-four{
+    position: relative;
+    padding:120px 0px 120px;
+
+    .sec-title{
+      margin-bottom: 35px;
+    }
+
+    .column{
+      position: relative;
+
+      .accordion-box_three{
+        padding-right: 100px;
+        @include media-breakpoint-down(xxl){
+          padding-right: 0px;
+        }
+      }
+
+    }
+
+    .images-outer{
+      position: relative;
+      .image:first-child {
+        display: block;
+      }
+      .image{
+        position: relative;
+        display: none;
+        img{
+          max-width: inherit;
+          @include media-breakpoint-down(xxl){
+              max-width: 100%;
+          }
+          @include media-breakpoint-down(xl){
+              width: 100%;
+          }
+        }
+        @include media-breakpoint-down(xl){
+            margin-top: 40px;
+        }
+      }
+    }
+
+}

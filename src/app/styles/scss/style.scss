@@ -1,0 +1,76 @@
+/* Nexella | IT Solutions & Technology HTML Template
+
+Template Name: Nexella
+Version: 1.0.0
+License: copyright commercial
+/************ TABLE OF CONTENTS ***************
+1.  Fonts
+2.  Reset
+3.  Global Settings
+4.  Main Header / Two
+5.  Sticky Header
+6.  Mobile Menu
+7.  Section Title
+8.  Banner Section / Two
+9.  About Section / Two
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+@import "common/mixing.scss";
+@import "common/root.scss";
+@import "common/loader.scss";
+
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@import url("animate.css");
+// @import url("swiper.min.css");
+@import url("jquery.fancybox.min.css");
+@import url("linear.css");
+@import url("fontawesome.css");
+@import url("tm-bs-mp.css");
+// @import url("jquery-ui.css");
+@import url("tm-utility-classes.css");
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "button.scss";
+@import "animate.scss";
+@import "search-popup.scss";
+@import "header.scss";
+@import "mobile-menu.scss";
+@import "section-title.scss";
+
+@import "banner.scss";
+@import "about.scss";
+@import "mission.scss";
+@import "features.scss";
+@import "services.scss";
+@import "testimonials.scss";
+@import "process.scss";
+@import "work.scss";
+@import "video.scss";
+@import "marquee.scss";
+@import "team.scss";
+@import "contact.scss";
+@import "news.scss";
+@import "why-choose.scss";
+@import "skill.scss";
+@import "pricing.scss";
+@import "brand.scss";
+@import "sidebar.scss";
+@import "footer.scss";
+
+@import "shop/loader.scss";
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/contact-page.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";

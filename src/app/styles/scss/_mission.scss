@@ -1,0 +1,83 @@
+/*======================================================
+  Start Mission Section
+========================================================*/
+
+.mission-section {
+  padding: 0 0 120px;
+  background: var(--theme-color4);
+
+  .icon-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  p.mission-description {
+    line-height: 26px;
+    margin-top: 28px;
+    width: 85%;
+  }
+
+  .mission-list-item {
+    border: 1px solid rgba(255, 255, 255, .1);
+    padding: 37px 0;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      position: absolute;
+      content: '';
+      right: 0;
+      top: 0;
+      margin: auto;
+      left: 0;
+      height: 100%;
+      width: 1px;
+      background: rgba(255, 255, 255, .1);
+      z-index: -1;
+    }
+
+    .mission-list {
+      text-align: center;
+
+    }
+
+    .misssion-list-two {
+      margin-top: 37px;
+      border-top: 1px solid rgba(255, 255, 255, .1);
+      padding-top: 36px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      @include media-breakpoint-down(xl){
+        padding: 0;
+      }
+      @include media-breakpoint-down(lg){
+        justify-content: space-around;
+      }
+
+      li {
+        font-weight: var(--h5-font-weight);
+        font-size: 20px;
+        font-weight: 400;
+        color: var(--theme-color-white);
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        max-width: 260px;
+        width: 100%;
+        transition: 0.5s;
+        @include media-breakpoint-down(xl){
+          padding-left: 15px;
+        }
+        @include media-breakpoint-down(lg){
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
